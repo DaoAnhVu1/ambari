@@ -62,7 +62,6 @@
           <prereqs>
             <prereq>ambari-server &gt;= ${ambari.version}</prereq>
           </prereqs>
-
           <mappings>
             <mapping>
               <directory>${views.directory}</directory>
@@ -83,8 +82,8 @@
         <artifactId>jdeb</artifactId>
         <executions>
           <execution>
-            <id>jdeb-ambari-views-package</id>
-            <phase>package</phase>
+            <!-- <id>jdeb-ambari-views-package</id> -->
+            <phase>none</phase>
             <goals>
               <goal>jdeb</goal>
             </goals>
@@ -116,7 +115,6 @@
           <skipAssembly>true</skipAssembly>
         </configuration>
       </plugin>
-
     </plugins>
   </build>
 </project>

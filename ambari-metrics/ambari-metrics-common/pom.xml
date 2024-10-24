@@ -26,7 +26,6 @@
   <modelVersion>4.0.0</modelVersion>
   <artifactId>ambari-metrics-common</artifactId>
   <name>Ambari Metrics Common</name>
-
   <build>
     <plugins>
       <plugin>
@@ -108,7 +107,8 @@
     <dependency>
       <groupId>org.apache.hadoop</groupId>
       <artifactId>hadoop-annotations</artifactId>
-      <version>${hadoop.version}</version>
+       <!-- <version>${hadoop.version}</version> -->
+       <version>3.3.4</version>
       <exclusions>
         <exclusion>
           <groupId>jdk.tools</groupId>

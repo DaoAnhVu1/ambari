@@ -28,7 +28,7 @@ cd "$(dirname "$0")"
 : ${AMBARI_DIR:=$(pwd -P)}
 
 # Maven version
-: ${MAVEN_VERSION:=3.3.9}
+: ${MAVEN_VERSION:=3.9.9}
 
 docker build -t ambari-build-base:${BUILD_OS} dev-support/docker/${BUILD_OS}
 docker build -t ambari-build:${BUILD_OS} --build-arg BUILD_OS="${BUILD_OS}" --build-arg MAVEN_VERSION="${MAVEN_VERSION}" dev-support/docker/common
@@ -50,15 +50,18 @@ if [ "$#" -gt 0 ]; then
   TTY_MODE=""
 fi
 
+echo "Run container $TTY_MODE $USER_TAG" 
 # By mapping the .m2 directory you can do an mvn install from
 # within the container and use the result on your normal
 # system.  This also allows a significant speedup in subsequent
 # builds, because the dependencies are downloaded only once.
-docker run --rm=true $TTY_MODE \
-  -u "${USER_NAME}" \
+docker run \
+  -u root \
   -h "${BUILD_OS}" \
   -v "${AMBARI_DIR}:/home/${USER_NAME}/src:delegated" \
   -v "${HOME}/.m2:/home/${USER_NAME}/.m2:cached" \
   -w "/home/${USER_NAME}/src" \
+  -d \
   "$USER_TAG" \
-  "$@"
+  sleep infinity
+
