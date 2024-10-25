@@ -1,0 +1,70 @@
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<ng-template #fieldTemplate let-value let-field="field" let-component="component">
+  <div class="audit-logs-list-column dashrow-column" [class.audit-logs-list-column-common]="isCommonField(field)" [ngClass]="field"
+  [class.data-not-available]="!value">
+    <div class="audit-logs-list-column-value dashrow-value">
+      <ng-container [ngSwitch]="field">
+        <span class="date-time-format" *ngSwitchCase="'evtTime'">{{value | amTz: timeZone | amDateFormat: timeFormat}}</span>
+        <span *ngSwitchCase="'repo'">{{value | repoLabel | async}}</span>
+        <span *ngSwitchCase="'type'">{{value | componentLabel | async}}</span>
+        <span *ngSwitchCase="'host'">{{value | hostName | async}}</span>
+        <span *ngSwitchDefault class="default-format">{{value || ('common.notAvailable' | translate)}}</span>
+      </ng-container>
+    </div>
+    <div class="audit-logs-list-column-label dashrow-label">{{(field | auditLogFieldLabel:component | async) | translate}}</div>
+  </div>
+</ng-template>
+
+<div class="audit-logs-list-controls">
+  <form *ngIf="logs && logs.length" [formGroup]="filtersForm" class="row pull-right">
+    <filter-dropdown class="col-md-12" label="{{filters.auditLogsSorting.label | translate}}"
+      formControlName="auditLogsSorting" [options]="filters.auditLogsSorting.options"
+      [isRightAlign]="true" [showCommonLabelWithSelection]="true"></filter-dropdown>
+  </form>
+  <dropdown-button class="pull-right" label="{{'logs.columns' | translate}}" (selectItem)="updateSelectedColumns($event)" [useClearToDefaultSelection]="true"
+    [options]="columns" [isRightAlign]="true" [isMultipleChoice]="true" [useDropDownLocalFilter]="true" [closeOnSelection]="false"></dropdown-button>
+</div>
+
+<section class="audit-logs-list-container">
+  <div class="audit-logs-list-body dashrow-container">
+    <div *ngFor="let log of logs" class="audit-logs-list-row dashrow-row-wrapper" [ngClass]="log.repo">
+      <div class="repo-initial dashrow-initial">{{log.repo[0]}}</div>
+      <div class="audit-logs-list-row dashrow-row">
+        <div *ngIf="displayedCommonColumns.length" class="dashrow-column-group dashrow-column-group-fixed-left">
+          <ng-container *ngFor="let field of displayedCommonColumns">
+            <ng-container *ngIf="log[field] !== undefined">
+              <ng-container *ngTemplateOutlet="fieldTemplate; context:{$implicit: log[field], field: field, component: log.type}"></ng-container>
+            </ng-container>
+          </ng-container>
+        </div>
+        <div *ngIf="displayedNotCommonColumns.length" class="dashrow-column-group">
+          <ng-container *ngFor="let field of displayedNotCommonColumns">
+            <ng-container *ngIf="log[field] !== undefined">
+              <ng-container *ngTemplateOutlet="fieldTemplate; context:{$implicit: log[field], field: field, component: log.type}"></ng-container>
+            </ng-container>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="audit-logs-list-footer">
+    <pagination class="col-md-12" *ngIf="logs && logs.length" [totalCount]="totalCount" [filtersForm]="filtersForm" [filterInstance]="filters.pageSize"
+      [currentCount]="logs.length"></pagination>
+  </footer>
+</section>
