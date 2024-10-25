@@ -208,6 +208,17 @@
               </execution>
             </executions>
           </plugin>
+          <plugin>
+            <artifactId>maven-jar-plugin</artifactId>
+            <version>2.6</version>
+            <executions>
+              <execution>
+                <goals>
+                  <goal>jar</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
         </plugins>
       </build>
     </profile>
@@ -399,6 +410,17 @@
                     <chmod file="${project.build.directory}/solr/server/scripts/**" perm="755"/>
                   </target>
                 </configuration>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <artifactId>maven-jar-plugin</artifactId>
+            <version>2.6</version>
+            <executions>
+              <execution>
+                <goals>
+                  <goal>jar</goal>
+                </goals>
               </execution>
             </executions>
           </plugin>
