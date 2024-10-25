@@ -22,7 +22,7 @@ set -e -u
 cd "$(dirname "$0")"
 
 # OS to build on
-: ${BUILD_OS:=centos7}
+: ${BUILD_OS:=centos9}
 
 # Directory with Ambari source
 : ${AMBARI_DIR:=$(pwd -P)}
