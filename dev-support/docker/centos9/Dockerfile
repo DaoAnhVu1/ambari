@@ -2,6 +2,9 @@ FROM quay.io/centos/centos:stream9
 
 RUN yum update -y
 
+RUN yum -q -y install epel-release \
+  && yum -q -y install "Development Tools"
+
 RUN yum -q -y install \
     gcc \
     gcc-c++ \
