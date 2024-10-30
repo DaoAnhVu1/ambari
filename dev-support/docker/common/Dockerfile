@@ -19,7 +19,7 @@
 ARG BUILD_OS
 FROM ambari-build-base:${BUILD_OS}
 
-ARG MAVEN_VERSION=3.3.9
+ARG MAVEN_VERSION=3.9.9
 ENV MAVEN_HOME /opt/maven
 RUN mkdir -p $MAVEN_HOME \
   && maven_url=$(curl -L -s -S http://www.apache.org/dyn/closer.cgi/maven/maven-3/${MAVEN_VERSION}/binaries/apache-maven-${MAVEN_VERSION}-bin.tar.gz?as_json=1 \
