@@ -5,6 +5,7 @@
           "redhat",
           "fedora",
           "centos",
+          "centos stream",
           "oraclelinux",
           "ascendos",
           "xenserver",
@@ -14,7 +15,8 @@
           "slc",
           "scientific",
           "psbm",
-          "centos linux"
+          "centos linux",
+          "any"
         ],
         "versions": [
           6,
