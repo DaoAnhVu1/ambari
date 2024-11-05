@@ -55,7 +55,7 @@ fi
 # system.  This also allows a significant speedup in subsequent
 # builds, because the dependencies are downloaded only once.
 docker run --rm=true $TTY_MODE \
-  -u "${USER_NAME}" \
+  -u root \
   -h "${BUILD_OS}" \
   -v "${AMBARI_DIR}:/home/${USER_NAME}/src:delegated" \
   -v "${HOME}/.m2:/home/${USER_NAME}/.m2:cached" \

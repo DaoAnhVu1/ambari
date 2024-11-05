@@ -24,6 +24,18 @@
   <description>Ambari Functional Tests</description>
   <build>
     <plugins>
+
+    <plugin>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>2.6</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
        <plugin>
          <groupId>org.vafer</groupId>
          <artifactId>jdeb</artifactId>
