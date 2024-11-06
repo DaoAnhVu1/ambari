@@ -65,7 +65,7 @@
     <!-- <phoenix.tar>https://clemlabs.s3.eu-west-3.amazonaws.com/centos7/odp-release/${odp.release.stack}-${odp.release.number}/tars/phoenix/phoenix-hbase-${phoenix.hbase.compat}-${phoenix.version}-bin.tar.gz</phoenix.tar> -->
     <phoenix.tar>https://dlcdn.apache.org/phoenix/phoenix-${phoenix.version}/phoenix-hbase-2.5-${phoenix.version}-bin.tar.gz</phoenix.tar>
     <phoenix.folder>phoenix-hbase-${phoenix.hbase.compat}-${phoenix.version}-bin</phoenix.folder>
-    <resmonitor.install.dir>/usr/lib/python3.9/site-packages/resource_monitoring</resmonitor.install.dir>
+    <resmonitor.install.dir>/usr/lib/python3.11/site-packages/resource_monitoring</resmonitor.install.dir>
     <powermock.version>1.6.2</powermock.version>
     <distMgmtSnapshotsId>apache.snapshots.https</distMgmtSnapshotsId>
     <distMgmtSnapshotsName>Apache Development Snapshot Repository</distMgmtSnapshotsName>

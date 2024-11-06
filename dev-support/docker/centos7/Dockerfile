@@ -36,7 +36,7 @@ RUN yum -q -y install \
     python-setuptools \
     rpm-build \
     which \
-    python3.9\* \
+    python3.11\* \
     python3.11\* \
     python3-\* \
   && yum clean all \
