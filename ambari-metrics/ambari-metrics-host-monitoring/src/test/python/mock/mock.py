@@ -172,7 +172,7 @@ def _getsignature(func, skipfirst, instance=False):
         regargs, varargs, varkw, defaults, kwonly, kwonlydef, ann = argspec
     else:
         try:
-            regargs, varargs, varkwargs, defaults = inspect.getargspec(func)
+            regargs, varargs, varkwargs, defaults = inspect.getfullargspec(func)
         except TypeError:
             # C function / method, possibly inherited object().__init__
             return

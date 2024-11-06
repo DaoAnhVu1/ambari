@@ -90,7 +90,7 @@ def format_function(name, aliases, func):
             signature = match.group(1)
     else:
         try:
-            argspec = inspect.getargspec(func)
+            argspec = inspect.getfullargspec(func)
             if getattr(func, 'environmentfilter', False) or \
                getattr(func, 'contextfilter', False):
                 del argspec[0][0]
