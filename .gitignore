@@ -33,3 +33,8 @@ createDDL.jdbc
 /build
 ambari_python.egg-info
 db-ambari-test
+repo-ambari.tar.gz
+pyupgrade.log
+pylint.log
+my.py
+conversion.log
