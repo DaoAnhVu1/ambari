@@ -34,3 +34,6 @@ createDDL.jdbc
 ambari_python.egg-info
 db-ambari-test
 output.out
+/rpms
+ambari-fix-2.tar.gz
+*.tar.gz

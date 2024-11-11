@@ -30,9 +30,9 @@
   <target name="package">
     <delete dir="target/package" />
     <copy todir="target/package/libs" includeEmptyDirs="no">
-      <fileset file="target/ambari-logsearch-appender.jar" />
+      <fileset file="target/ambari-logsearch-appender-2.7.9.0.0.jar" />
     </copy>
-    <tar compression="gzip" destfile="target/ambari-logsearch-appender.tar.gz">
+    <tar compression="gzip" destfile="target/ambari-logsearch-appender-2.7.9.0.0.tar.gz">
       <tarfileset dir="target/package" />
     </tar>
   </target>
