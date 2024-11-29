@@ -5,6 +5,7 @@
           "redhat",
           "fedora",
           "centos",
+          "centos stream",
           "oraclelinux",
           "ascendos",
           "xenserver",

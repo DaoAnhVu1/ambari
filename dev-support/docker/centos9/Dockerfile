@@ -18,6 +18,7 @@ RUN yum -q -y install \
     python-setuptools \
     rpm-build \
     which \
+    createrepo_c \
     openssl-devel bzip2-devel libffi-devel \
     zlib-devel ncurses-devel readline-devel sqlite-devel
 
