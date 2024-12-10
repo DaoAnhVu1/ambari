@@ -271,14 +271,114 @@ class LinuxDBMSConfig(DBMSConfig):
 
   # Let the console user initialize the remote database schema
   def _setup_remote_db(self):
-    setup_msg = "Before starting Ambari Server, you must run the following DDL " \
+    retCode = 0
+    
+    # if self.dbms == "postgres" or self.dbms == "oracle" or self.dbms == "mysql" or self.dbms == "mssql":
+    if self.dbms == "postgres" or self.dbms == "mysql":
+      required_yum_packages = []
+      sql_client_commands = ""
+      sql_client_commands_with_password = ""
+      
+      if self.dbms == "postgres":
+        required_yum_packages = ["postgresql"]
+        sql_client_commands = "psql -h {0} -p {1} -d {2} -U {3} -f {4}".format(
+          self.database_host,
+          self.database_port,
+          self.database_name,
+          self.database_username,
+          self.init_script_file
+        )
+        sql_client_commands_with_password = "PGPASSWORD={0} {1}".format(self.database_password, sql_client_commands)
+      elif self.dbms == "oracle":
+        required_yum_packages = ["oracle-instantclient-basic", "oracle-instantclient-sqlplus"]
+        #sqlplus b@a.com:n/db @d.sql
+        sql_client_commands = "sqlplus {0}@{1}:{2}/{3} @{4}".format(
+          self.database_username,
+          self.database_host,
+          self.database_port,
+          self.database_name,
+          self.init_script_file
+        )
+        sql_client_commands_with_password = "sqlplus {0}/{1}@{2}:{3}/{4} @{5}".format(
+          self.database_username,
+          self.database_password,
+          self.database_host,
+          self.database_port,
+          self.database_name,
+          self.init_script_file
+        )
+      elif self.dbms == "mysql":
+        required_yum_packages = ["mysql"]
+        sql_client_commands = "mysql -h {0} -P {1} -u {2} -D {3} < {4}".format(
+          self.database_host,
+          self.database_port,
+          self.database_username,
+          self.database_name,
+          self.init_script_file
+        )
+        sql_client_commands_with_password = "mysql -h {0} -P {1} -u {2} -p{3} -D {4} < {5}".format(
+          self.database_host,
+          self.database_port,
+          self.database_username,
+          self.database_password,
+          self.database_name,
+          self.init_script_file
+        )
+      else:
+        required_yum_packages = ["mssql-tools", "unixODBC-devel"]
+        sql_client_commands = "sqlcmd -S {0},{1} -U {2} -d {3} -i {4}".format(
+          self.database_host,
+          self.database_port,
+          self.database_username,
+          self.database_name,
+          self.init_script_file
+        )
+        sql_client_commands_with_password = "sqlcmd -S {0},{1} -U {2} -P {3} -d {4} -i {5}".format(
+          self.database_host,
+          self.database_port,
+          self.database_username,
+          self.database_password,
+          self.database_name,
+          self.init_script_file
+        )
+      
+      print("\n\n")
+      print("Configuring remote database connection properties WILL:\n"
+            "  1) Install yum package(s) '{0}'\n"
+            "  2) Run DDL script '{1}'\n\n".format(required_yum_packages, self.init_script_file))
+      
+      proceed = get_YN_input("Proceed with configuring remote database connection properties [y/n] (y)? ", True)
+      
+      if proceed:
+        print("\nInstalling yum package(s) {0}".format(required_yum_packages))
+        install_yum_pkgs = [AMBARI_SUDO_BINARY, "yum", "install", "-y"] + required_yum_packages
+        retCode, _, error = run_os_command(install_yum_pkgs)
+        
+        print("Running DDL script...")
+        if self.database_password:
+          cmd = ["bash", "-c", sql_client_commands_with_password]
+          retCode, _, error = run_os_command(cmd)
+          # print_info_msg("retCode = {0}".format(retCode))
+        else:
+          cmd = ["bash", "-c", sql_client_commands]
+          retCode, _, error = run_os_command(cmd)
+          # print_info_msg("retCode = {0}".format(retCode))
+        
+        if not retCode == 0:
+          print_error_msg("Error executing DDL script: {0}".format(error))
+          return retCode
+      else:
+        print("Configuring remote database connection properties aborted.\n"
+              "Please run the following command manually to configure the remote database:\n"
+              "  {0}".format(sql_client_commands))
+        retCode = -1
+      
+    else:
+      setup_msg = "Before starting Ambari Server, you must run the following DDL " \
                 "directly from the database shell to create the schema: {0}".format(self.init_script_file)
-
-    print_warning_msg(setup_msg)
-
-    proceed = get_YN_input("Proceed with configuring remote database connection properties [y/n] (y)? ", True)
-    retCode = 0 if proceed else -1
-
+      print_warning_msg(setup_msg)
+      retCode = -1
+      
     return retCode
 
   def _store_password_property(self, properties, property_name, options):

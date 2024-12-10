@@ -172,6 +172,86 @@ class HdfsResourceJar:
     # Clean
     env.config['hdfs_files'] = []
 
+class HDFSCliUtils:
+  # def put_file(source, target, hdfs_user, owner, principal, permission, keytab, kinit_path, hadoop_bin_dir, security_enabled, logoutput):
+  @staticmethod
+  def put_file(source, target, hdfs_user, owner, group, permission, logoutput, overwrite=True):
+    # if security_enabled:
+    #   Execute("{kinit_path} -kt {keytab} {user}".format(kinit_path=kinit_path, keytab=keytab, user=principal),
+    #           user=hdfs_user,
+    #   )
+    upload_cmd = ["hadoop", "fs", "-put"]
+    if overwrite:
+      upload_cmd.append("-f")
+    upload_cmd.extend([source, target])
+    
+    try_count = 6
+    while True:
+      retCode, out, err = get_user_call_output(upload_cmd, user=hdfs_user, logoutput=logoutput)
+      
+      if retCode == 0:
+        break
+      
+      try_count -= 1
+      if try_count == 0:
+        Logger.error("Error while uploading file to HDFS. Command: {0}. Error: {1}".format(upload_cmd, err))
+        return
+      else:
+        Logger.info("Retrying after 10 seconds to upload file to HDFS. Command: {0}. Error: {1}.".format(upload_cmd, err))
+        time.sleep(10)
+    
+    if permission:
+      chmod_cmd = ["hadoop", "fs", "-chmod", permission, target]
+      
+      try_count = 6
+      
+      while True:
+        retCode, out, err = get_user_call_output(chmod_cmd, user=hdfs_user, logoutput=logoutput)
+        
+        if retCode == 0:
+          break
+        
+        try_count -= 1
+        if try_count == 0:
+          Logger.error("Error while uploading file to HDFS. Command: {0}. Error: {1}".format(upload_cmd, err))
+          return
+        else:
+          Logger.info("Retrying after 10 seconds to upload file to HDFS. Command: {0}. Error: {1}.".format(upload_cmd, err))
+          time.sleep(10)
+    
+    if owner or group:
+      chown_cmd = ["hadoop", "fs"]
+      
+      if owner:
+        chown_cmd.append("-chown")
+        if group:
+          chown_cmd.append("{0}:{1}".format(owner, group))
+        else:
+          chown_cmd.append(owner)
+      if group:
+        chown_cmd.append("-chgrp")
+        chown_cmd.append(group)
+      
+      chown_cmd.append(target)
+      
+      try_count = 6
+      
+      while True:
+        retCode, out, err = get_user_call_output(chown_cmd, user=hdfs_user, logoutput=logoutput)
+        
+        if retCode == 0:
+          break
+        
+        try_count -= 1
+        if try_count == 0:
+          Logger.error("Error while uploading file to HDFS. Command: {0}. Error: {1}".format(upload_cmd, err))
+          return
+        else:
+          Logger.info("Retrying after 10 seconds to upload file to HDFS. Command: {0}. Error: {1}.".format(upload_cmd, err))
+          time.sleep(10)
+       
+       
+      
 
 class WebHDFSCallException(Fail):
   def __init__(self, message, result_message):
@@ -210,6 +290,24 @@ class WebHDFSUtil:
     """
     This functions is a wrapper for self._run_command which does retry routine for it.
     """
+    file_to_put = kwargs['file_to_put'] if 'file_to_put' in kwargs else None
+    target = args[0]
+    operation = args[1]
+    method = kwargs['method'] if 'method' in kwargs else 'GET'
+    file_to_put = kwargs['file_to_put'] if 'file_to_put' in kwargs else None
+    
+    if file_to_put:     
+      if os.path.exists(file_to_put) and (method == 'POST' or method == 'PUT'):
+        permission = kwargs['permission'] if 'permission' in kwargs else None
+        owner = kwargs['owner'] if 'owner' in kwargs else None
+        group = kwargs['group'] if 'group' in kwargs else None
+        overwrite = kwargs['overwrite'] if 'overwrite' in kwargs else True
+        HDFSCliUtils.put_file(file_to_put, target, self.run_user, owner, group, permission, self.logoutput, overwrite)
+        
+        return None
+      
+      Logger.info(format("Uploading file {file_to_put} to {target} via WebHDFS"))
+      
     try:
       return self._run_command(*args, **kwargs)
     except WebHDFSCallException as ex:
@@ -246,6 +344,7 @@ class WebHDFSUtil:
     assertable_result - some POST requests return '{"boolean":false}' or '{"boolean":true}'
     depending on if query was successful or not, we can assert this for them
     """
+      
     target = HdfsResourceProvider.parse_path(target)
     if not target:
       raise Fail("Target cannot be empty")
@@ -270,6 +369,7 @@ class WebHDFSUtil:
 
       if file_to_put:
         cmd += ["--data-binary", "@"+file_to_put, "-H", "Content-Type: application/octet-stream"]
+        # cmd += ["--upload-file", file_to_put, "-H", "Content-Type: application/octet-stream"]
       else:
         cmd += ["-d", "", "-H", "Content-Length: 0"]
 

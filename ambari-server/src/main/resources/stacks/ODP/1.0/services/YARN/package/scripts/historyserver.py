@@ -103,6 +103,7 @@ class HistoryServerDefault(HistoryServer):
       # In stack versions before copy_tarball_to_hdfs support tez.tar.gz was copied to a different folder in HDFS.
       install_tez_jars()
 
+    # TODO: Add chmod for /mr-history/done/
     service('historyserver', action='start', serviceName='mapreduce')
 
   def status(self, env):

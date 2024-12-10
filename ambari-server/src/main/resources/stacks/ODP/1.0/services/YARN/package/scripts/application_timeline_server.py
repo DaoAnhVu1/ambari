@@ -92,6 +92,7 @@ def wait_yarn_fast_launch_acls(afterwait_sleep=0, execute_kinit=True, retries=60
         yarn_fastlaunch_is_enabled = False
         if counter < retries:
           Logger.info("Waiting up to {0} seconds to HDFS to grant access ...".format(sleep_seconds))
+          Execute("hdfs dfs -chmod -R 777 /odp/apps/1.2.2.0-138/yarn", user=params.hdfs_user)
           time.sleep(sleep_seconds)
         else:
           Logger.info("Failed to Enable Yarn FastLaunch")
