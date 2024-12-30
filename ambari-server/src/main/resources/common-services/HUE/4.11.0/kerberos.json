@@ -1,0 +1,49 @@
+{
+  "services": [
+    {
+      "name": "HUE",
+      "identities": [
+        {
+          "name": "/spnego"
+        }
+      ],
+      "configurations": [
+        {
+          "core-site": {
+            "hadoop.proxyuser.HTTP.groups": "*",
+            "hadoop.proxyuser.HTTP.hosts": "*",
+            "hue.kerberos.principal.shortname": "hue"
+          }
+        }
+      ],
+      "components": [
+        {
+          "name": "HUE_SERVER",
+          "identities": [
+            {
+              "name": "HUE_SERVER",
+              "principal": {
+                "value": "${hue-env/hue_user}${principal_suffix}@${realm}",
+                "type" : "user",
+                "configuration": "hue-env/hue_principal_name",
+                "local_username": "${hue-env/hue_user}"
+              },
+              "keytab": {
+                "file": "${keytab_dir}/hue.headless.keytab",
+                "owner": {
+                  "name": "${hue-env/hue_user}",
+                  "access": "r"
+                },
+                "group": {
+                  "name": "${cluster-env/user_group}",
+                  "access": "r"
+                },
+                "configuration": "hue-env/hue_user_keytab"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

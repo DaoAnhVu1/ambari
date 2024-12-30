@@ -1,0 +1,26 @@
+[notebook]
+[[interpreters]]
+{% if rdbms_mysql_engine == True %}
+   [[[mysql]]]
+   name={{rdbms_mysql_nice_name}}
+   interface=sqlalchemy
+   options='{"url":"mysql://{{rdbms_mysql_user}}:{{rdbms_mysql_password}}@{{rdbms_mysql_host}}:{{rdbms_mysql_port}}/{{rdbms_mysql_name}}"}'
+{% endif %}
+{% if rdbms_postgresql_engine == True %}
+   [[[postgresql]]]
+   name={{rdbms_postgresql_nice_name}}
+   interface=sqlalchemy
+   options='{"url":"mysql://{{rdbms_postgresql_user}}:{{rdbms_postgresql_password}}@{{rdbms_postgresql_host}}:{{rdbms_postgresql_port}}/{{rdbms_postgresql_name}}"}'
+{% endif %}
+{% if rdbms_sqlite_engine == True %}
+   [[[sqlite]]]
+   name = {{rdbms_sqlite_nice_name}}
+   interface=sqlalchemy
+   options='{"url":"sqlite://{{rdbms_sqlite_name}}"}'
+{% endif %}
+{% if rdbms_oracle_engine == True %}
+   [[[oracle]]]
+   name = {{rdbms_oracle_nice_name}}
+   interface=sqlalchemy
+   options='{"url":"oracle://{{rdbms_oracle_user}}:{{rdbms_oracle_password}}@{{rdbms_oracle_host}}"}'
+{% endif %}
