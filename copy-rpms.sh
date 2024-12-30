@@ -39,3 +39,12 @@ cp /home/app1/Downloads/odp/var/www/html/ambari-release/dist/centos9/1.x/BUILDS/
 cp /home/app1/Downloads/odp/var/www/html/ambari-release/dist/centos9/1.x/BUILDS/2.7.9.0.0-110/rpms/files-1.0.0.0-110.noarch.rpm  target/rpms
 
 createrepo target/rpms
+
+
+# Copy 2
+rm target/rpms/ambari-agent-2.7.9.0-0.x86_64.rpm
+rm target/rpms/ambari-server-2.7.9.0-0.x86_64.rpm
+cp ambari-agent/target/rpm/ambari-agent/RPMS/x86_64/ambari-agent-2.7.9.0-0.x86_64.rpm target/rpms
+cp ambari-server/target/rpm/ambari-server/RPMS/x86_64/ambari-server-2.7.9.0-0.x86_64.rpm target/rpms
+
+createrepo target/rpms

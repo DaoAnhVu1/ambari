@@ -24,8 +24,8 @@ angular.module('ambariAdminConsole')
     'CLUSTER.USER': 'Read-Only',
     'VIEW.USER': 'Use',
 
-    'common.ambari': 'Ambari',
-    'common.apacheAmbari': 'Apache Ambari',
+    'common.ambari': 'Viettel Data Platform',
+    'common.apacheAmbari': 'Viettel Data Platform',
     'common.about': 'About',
     'common.version': 'Version',
     'common.signOut': 'Sign out',
@@ -120,7 +120,7 @@ angular.module('ambariAdminConsole')
     'common.loginActivities.status': 'Status',
     'common.loginActivities.status.disabled': 'Disabled',
 
-    'common.loginActivities.homeDirectory.alert': 'Many Ambari Views store user preferences in the logged in user\'s / user directory in HDFS. Optionally, Ambari can auto-create these directories for users on login.',
+    'common.loginActivities.homeDirectory.alert': 'Many Viettel Data Platform Views store user preferences in the logged in user\'s / user directory in HDFS. Optionally, Viettel Data Platform can auto-create these directories for users on login.',
     'common.loginActivities.homeDirectory.autoCreate': 'Auto-Create HDFS user directories',
     'common.loginActivities.homeDirectory.header': 'User Directory Creation Options',
     'common.loginActivities.homeDirectory.template': 'User Directory creation template',
@@ -167,8 +167,8 @@ angular.module('ambariAdminConsole')
     'common.alerts.onlySimpleChars': 'Must contain only simple characters.',
     'common.hidden' : 'Hidden',
 
-    'main.title': 'Welcome to Apache Ambari',
-    'main.noClusterDescription': 'Provision a cluster, manage who can access the cluster, and customize views for Ambari users.',
+    'main.title': 'Welcome to Viettel Data Platform',
+    'main.noClusterDescription': 'Provision a cluster, manage who can access the cluster, and customize views for Viettel Data Platform users.',
     'main.autoLogOut': 'Automatic Logout',
 
     'main.createCluster.title': 'Create a Cluster',
@@ -230,7 +230,7 @@ angular.module('ambariAdminConsole')
     'views.alerts.notDefined': 'There are no {{term}} defined for this view.',
     'views.alerts.cannotEditInstance': 'Cannot Edit Static Instances',
     'views.alerts.cannotDeleteStaticInstance': 'Cannot Delete Static Instances',
-    'views.alerts.deployError': 'Error deploying. Check Ambari Server log.',
+    'views.alerts.deployError': 'Error deploying. Check Viettel Data Platform Server log.',
     'views.alerts.cannotUseOption': 'This view cannot use this option',
     'views.alerts.unableToResetErrorMessage': 'Unable to reset error message for prop: {{key}}',
     'views.alerts.instanceCreated': 'Created View Instance {{instanceName}}',
@@ -292,8 +292,8 @@ angular.module('ambariAdminConsole')
     'users.username': 'Username',
     'users.user.name': 'User name',
     'users.admin': 'Admin',
-    'users.ambariAdmin': 'Ambari Admin',
-    'users.ambariClusterURL': 'Ambari Cluster URL',
+    'users.ambariAdmin': 'Viettel Data Platform Admin',
+    'users.ambariClusterURL': 'Viettel Data Platform Cluster URL',
     'users.changePassword': 'Change Password',
     'users.updateCredentials': 'Update Credentials',
     'users.changePasswordFor': 'Change Password for {{userName}}',
@@ -308,15 +308,15 @@ angular.module('ambariAdminConsole')
     'users.role': 'User Access',
     'users.confirmPassword': 'Confirm Password',
     'users.passwordConfirmation': 'Password сonfirmation',
-    'users.isAmbariAdmin': 'Is this user an Ambari Admin?',
+    'users.isAmbariAdmin': 'Is this user an Viettel Data Platform Admin?',
     'users.isActive': 'User Status',
-    'users.userIsAdmin': 'This user is an Ambari Admin and has all privileges.',
+    'users.userIsAdmin': 'This user is an Viettel Data Platform Admin and has all privileges.',
     'users.showAll': 'Show all users',
     'users.showAdmin': 'Show only admin users',
     'users.groupMembership': 'Group Membership',
     'users.userNameTip': 'Maximum length is 80 characters. \\, &, |, <, >, ` are not allowed.',
-    'users.adminTip': 'An Ambari Admin can create new clusters and other Ambari Admin Users.',
-    'users.deactivateTip': 'Active Users can log in to Ambari. Inactive Users cannot.',
+    'users.adminTip': 'An Viettel Data Platform Admin can create new clusters and other Viettel Data Platform Admin Users.',
+    'users.deactivateTip': 'Active Users can log in to Viettel Data Platform. Inactive Users cannot.',
 
     'users.changeStatusConfirmation.title': 'Change Status',
     'users.changeStatusConfirmation.message': 'Are you sure you want to change status for user "{{userName}}" to {{status}}?',
@@ -331,7 +331,7 @@ angular.module('ambariAdminConsole')
     'users.roles.clusterOperator': 'Cluster Operator',
     'users.roles.serviceAdministrator': 'Service Administrator',
     'users.roles.serviceOperator': 'Service Operator',
-    'users.roles.ambariAdmin': 'Ambari Administrator',
+    'users.roles.ambariAdmin': 'Viettel Data Platform Administrator',
     'users.roles.viewUser': 'View User',
     'users.roles.none': 'None',
     'users.roles.oneRolePerUserOrGroup': 'Only 1 role allowed per user or group',
@@ -360,9 +360,9 @@ angular.module('ambariAdminConsole')
 
     'versions.networkIssues.networkLost': 'Why is this disabled?',
     'versions.networkIssues.publicDisabledHeader': 'Public Repository Option Disabled',
-    'versions.networkIssues.publicRepoDisabledMsg': 'Ambari does not have access to the Internet and cannot use the Public Repository for installing the software. Your Options:',
+    'versions.networkIssues.publicRepoDisabledMsg': 'Viettel Data Platform does not have access to the Internet and cannot use the Public Repository for installing the software. Your Options:',
     'versions.networkIssues.publicRepoDisabledMsg1': 'Configure your hosts for access to the Internet.',
-    'versions.networkIssues.publicRepoDisabledMsg2': 'If you are using an Internet Proxy, refer to the Ambari Documentation on how to configure Ambari to use the Internet Proxy.',
+    'versions.networkIssues.publicRepoDisabledMsg2': 'If you are using an Internet Proxy, refer to the Viettel Data Platform Documentation on how to configure Viettel Data Platform to use the Internet Proxy.',
     'versions.networkIssues.publicRepoDisabledMsg3': 'Use the Local Repositoy option.',
 
     'versions.selectVersion': 'Select Version',
@@ -389,7 +389,7 @@ angular.module('ambariAdminConsole')
     'versions.skipValidation': 'Skip Repository Base URL validation (Advanced)',
     'versions.noVersions': 'Select version to display details.',
     'versions.patch': 'Patch',
-    'versions.introduction': 'To register a new version in Ambari, provide a Version Definition File, confirm the software repository information and save the version.',
+    'versions.introduction': 'To register a new version in Viettel Data Platform, provide a Version Definition File, confirm the software repository information and save the version.',
     'versions.repoID': 'Repo ID',
     'versions.repoName': 'Repo Name',
 
@@ -406,7 +406,7 @@ angular.module('ambariAdminConsole')
     'versions.repository.add': 'Add Repository',
 
     'versions.useRedhatSatellite.title': 'Use RedHat Satellite/Spacewalk',
-    'versions.useRedhatSatellite.warning': "In order for Ambari to install packages from the right repositories, " +
+    'versions.useRedhatSatellite.warning': "In order for Viettel Data Platform to install packages from the right repositories, " +
     "it is recommended that you edit the names of the repo's for each operating system so they match the channel " +
     "names in your RedHat Satellite/Spacewalk instance.",
     'versions.useRedhatSatellite.disabledMsg': 'Use of RedHat Satellite/Spacewalk is not available when using Public Repositories',
@@ -430,7 +430,7 @@ angular.module('ambariAdminConsole')
     'versions.alerts.repositoryExists': 'A repository with the same Repo ID already exists for {{os}}!',
     'versions.alerts.cannotDeleteInstalled': 'Cannot delete version already installed.',
 
-    'authentication.description': 'Ambari supports authenticating against local Ambari users created and stored in the Ambari Database, or authenticating against a LDAP server:',
+    'authentication.description': 'Viettel Data Platform supports authenticating against local Viettel Data Platform users created and stored in the Viettel Data Platform Database, or authenticating against a LDAP server:',
     'authentication.ldap': 'LDAP Authentication',
     'authentication.on': 'On',
     'authentication.off': 'Off',
@@ -469,7 +469,7 @@ angular.module('ambariAdminConsole')
     'authentication.attributes.groupMemberAttr': 'Group Member Attribute',
     'authentication.attributes.distinguishedNameAttr': 'Distinguished Name Attribute',
 
-    'authentication.attributes.test.description': 'To quickly test the chosen attributes click the button below. During this process you can specify a test user name and password and Ambari will attempt to authenticate and retrieve group membership information',
+    'authentication.attributes.test.description': 'To quickly test the chosen attributes click the button below. During this process you can specify a test user name and password and Viettel Data Platform will attempt to authenticate and retrieve group membership information',
     'authentication.attributes.test.username': 'Test Username',
     'authentication.attributes.test.password': 'Test Password',
 
@@ -484,7 +484,7 @@ angular.module('ambariAdminConsole')
 
     'exportBlueprint.dataLoaded': 'Data loaded...',
 
-    'remoteClusters.ambariClusterName': 'Ambari Cluster Name',
+    'remoteClusters.ambariClusterName': 'Viettel Data Platform Cluster Name',
     'remoteClusters.clusterURLPlaceholder': 'http://ambari.server:8080/api/v1/clusters/c1',
 
     'remoteClusters.alerts.fetchError': 'Error in fetching remote clusters.'
