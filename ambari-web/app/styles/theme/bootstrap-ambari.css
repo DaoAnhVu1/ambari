@@ -822,11 +822,12 @@ input.radio:checked + label:after {
   font-style: normal;
   line-height: 1;
   color: #333;
-  font-size: 20px;
-  width: 55px;
-  display: inline;
+  font-size: 16px;
+  /* width: 55px; */
+  display: inline-block;
   color: #b8bec4;
-  padding: 0 8px 0 10px;
+  padding: 0px 8px 0 10px;
+  margin-top: 2px;
 }
 .navigation-bar-container ul.nav.side-nav-header li.navigation-header .btn-group span.toggle-icon {
   margin-bottom: 5px;

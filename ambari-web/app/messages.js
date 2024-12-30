@@ -18,31 +18,31 @@
 
 Em.I18n.translations = {
 
-  'app.name':'Ambari',
-  'app.name.subtitle':'Ambari - {0}',
-  'app.name.subtitle.experimental':'Ambari Experimental',
+  'app.name':'Viettel Data Platform',
+  'app.name.subtitle':'Viettel Data Platform - {0}',
+  'app.name.subtitle.experimental':'Viettel Data Platform Experimental',
   'app.name.subtitle.installer':'Cluster Install Wizard',
   'app.reloadPopup.link': 'Reload Page',
   'app.reloadPopup.text': 'Trying to connect to server...',
   'app.reloadPopup.noClusterName.text': 'Failed to retrieve cluster name, trying to reload...',
   'app.reloadPopup.header': 'Reload Page',
   'app.redirectIssuePopup.header': 'Login Redirect Issue',
-  'app.redirectIssuePopup.body': 'For single sign-on, make sure that Knox Gateway and Ambari Server are located on the same host or subdomain.' +
-    '<br/>Alternatively login as an Ambari local user using the local login page.<br />' +
+  'app.redirectIssuePopup.body': 'For single sign-on, make sure that Knox Gateway and Viettel Data Platform Server are located on the same host or subdomain.' +
+    '<br/>Alternatively login as an Viettel Data Platform local user using the local login page.<br />' +
     '<a rel="noopener noreferrer" href="{0}" target="_blank">{0}</a>',
 
   'app.loadingPlaceholder': 'Loading...',
-  'app.versionMismatchAlert.title': 'Ambari Server / Web Client Version Mismatch',
-  'app.versionMismatchAlert.body': 'Ambari Server and Web Client versions do not match:<br> ' +
-    '<br>Ambari Server: <strong>{0}</strong>' +
-    '<br>Ambari Web Client: <strong>{1}</strong><br>' +
-    '<br>This typically happens after upgrading Ambari due to Ambari Web Client code cached in the browser.' +
+  'app.versionMismatchAlert.title': 'Viettel Data Platform Server / Web Client Version Mismatch',
+  'app.versionMismatchAlert.body': 'Viettel Data Platform Server and Web Client versions do not match:<br> ' +
+    '<br>Viettel Data Platform Server: <strong>{0}</strong>' +
+    '<br>Viettel Data Platform Web Client: <strong>{1}</strong><br>' +
+    '<br>This typically happens after upgrading Viettel Data Platform due to Viettel Data Platform Web Client code cached in the browser.' +
     '<br>Perform a hard browser cache refresh, typically \'Ctrl+Shift+R\' (\'Cmd+Shift+R\' on OS X), to see if this message disappears.' +
     '<br>If you keep seeing this message, clear the browser cache completely and hit this URL again.' +
     '<br>You must resolve this error in order to continue.',
   'app.signout':'Sign out',
   'app.settings':'Settings',
-  'app.manageAmbari': 'Manage Ambari',
+  'app.manageAmbari': 'Manage Viettel Data Platform',
   'app.aboutAmbari':'About',
   'app.settings.selectTimezone': 'Timezone',
   'app.settings.notshowBgOperationsPopup': 'Do not show the Background Operations dialog when starting an operation',
@@ -52,7 +52,7 @@ Em.I18n.translations = {
   'app.settings.noData': 'Unable to retrieve settings data',
   'app.settings.no.view.privileges': 'No view privileges',
   'app.settings.no.cluster.privileges': 'No cluster privileges',
-  'app.settings.admin.all.privileges': 'This user is an Ambari Admin and has all privileges.',
+  'app.settings.admin.all.privileges': 'This user is an Viettel Data Platform Admin and has all privileges.',
   'app.settings.no.privileges': 'This user does not have any privileges.',
   'app.settings.clusterRole': 'Cluster Role',
   'app.settings.viewPermissions': 'View Permissions',
@@ -481,7 +481,7 @@ Em.I18n.translations = {
   'popup.clusterCheck.Upgrade.configsMerge.deprecated': 'Property is deprecated',
   'popup.clusterCheck.Upgrade.configsMerge.willBeRemoved': 'Will be removed',
   'popup.clusterCheck.Upgrade.configsRecommend.alert': 'We\'ve detected the need to update the following properties,' +
-  ' but cannot do so automatically since they have been customized.  Please review these properties manually,' +
+  ' but cannot do so automatically since they have been customized. Please review these properties manually,' +
   ' and update the properties manually where necessary.',
   'popup.clusterCheck.Upgrade.configsRecommend.title': 'Recommended Configuration Changes: Manual Review',
   'popup.clusterCheck.Security.header': 'Enable Security',
@@ -494,8 +494,8 @@ Em.I18n.translations = {
   'popup.invalid.KDC.admin.password': 'Admin password',
 
   'popup.dependent.configs.header': 'Dependent Configurations',
-  'popup.dependent.configs.title.recommendation': 'Based on your configuration changes, Ambari is recommending the following dependent configuration changes.',
-  'popup.dependent.configs.title.values': 'Ambari will update all checked configuration changes to the <b>Recommended Value</b>. Uncheck any configuration to retain the <b>Current Value</b>.',
+  'popup.dependent.configs.title.recommendation': 'Based on your configuration changes, Viettel Data Platform is recommending the following dependent configuration changes.',
+  'popup.dependent.configs.title.values': 'Viettel Data Platform will update all checked configuration changes to the <b>Recommended Value</b>. Uncheck any configuration to retain the <b>Current Value</b>.',
   'popup.dependent.configs.title.required': 'The following configuration changes are required and will be applied automatically.',
   'popup.dependent.configs.table.recommended': 'Recommended Changes',
   'popup.dependent.configs.table.required': 'Required Changes',
@@ -521,7 +521,7 @@ Em.I18n.translations = {
   'popup.dependent.configs.dependencies.for.groups': 'You are changing not default group, please select config group to which you want to save dependent configs from other services',
 
   'popup.jdkValidation.header': 'Unsupported JDK',
-  'popup.jdkValidation.body': 'The {0} Stack requires JDK {1} but Ambari is configured for JDK {2}. This could result in error or problems with running your cluster.',
+  'popup.jdkValidation.body': 'The {0} Stack requires JDK {1} but Viettel Data Platform is configured for JDK {2}. This could result in error or problems with running your cluster.',
   'popup.logTail.header': 'File Name',
   'popup.logTail.openInLogSearch': 'Open In Log Search',
 
@@ -531,13 +531,13 @@ Em.I18n.translations = {
   'login.loginButton':'Sign in',
   'login.error.bad.credentials':'Unable to sign in. Invalid username/password combination.',
   'login.error.disabled':'Unable to sign in. Invalid username/password combination.',
-  'login.error.bad.connection':'Unable to connect to Ambari Server. Confirm Ambari Server is running and you can reach Ambari Server from this machine.',
+  'login.error.bad.connection':'Unable to connect to Viettel Data Platform Server. Confirm Viettel Data Platform Server is running and you can reach Viettel Data Platform Server from this machine.',
 
   'titlebar.alerts.noAlerts': 'No Alerts',
 
   'graphs.noData.title': 'No Data',
   'graphs.noData.message': 'No Data Available',
-  'graphs.noData.tooltip.title': 'No Data Available. The Ambari Metrics service may be not installed or inaccessible',
+  'graphs.noData.tooltip.title': 'No Data Available. The Viettel Data Platform Metrics service may be not installed or inaccessible',
   'graphs.noDataAtTime.message': 'No available data for the time period.',
   'graphs.error.title': 'Error',
   'graphs.error.message': 'There was a problem getting data for the chart ({0}: {1})',
@@ -605,7 +605,7 @@ Em.I18n.translations = {
 
   'installer.controls.slaveComponentGroups':' Groups',
   'installer.controls.serviceConfigPopover.title':'{0}<br><small>{1}</small>',
-  'installer.controls.checkConnection.popover':'This action will check accessibility of {0} host and port from Ambari Server host',
+  'installer.controls.checkConnection.popover':'This action will check accessibility of {0} host and port from Viettel Data Platform Server host',
   'installer.controls.serviceConfigMultipleHosts.other':'1 other',
   'installer.controls.serviceConfigMultipleHosts.others':'{0} others',
   'installer.controls.serviceConfigMasterHosts.header':'{0} Hosts',
@@ -631,9 +631,9 @@ Em.I18n.translations = {
   'installer.step1.selectUseRepoOptions.public.networkLost.button':'Not Available',
   'installer.step1.selectUseRepoOptions.public.networkLost':'Why is this not selected?',
   'installer.step1.selectUseRepoOptions.public.networkLost.popup.title': 'Public Repository Option Not Selected',
-  'installer.step1.selectUseRepoOptions.public.networkLost.popup.msg': 'Ambari is unable to confirm access to the Public Repositories, which means you might not have Internet access and will not be able to use the Public Repository option for installing the software. Your choices:',
+  'installer.step1.selectUseRepoOptions.public.networkLost.popup.msg': 'Viettel Data Platform is unable to confirm access to the Public Repositories, which means you might not have Internet access and will not be able to use the Public Repository option for installing the software. Your choices:',
   'installer.step1.selectUseRepoOptions.public.networkLost.popup.msg1': 'Configure your hosts for access to the Internet.',
-  'installer.step1.selectUseRepoOptions.public.networkLost.popup.msg2': 'If you are using an Internet Proxy, refer to the Ambari Documentation on how to configure Ambari to use the Internet Proxy.',
+  'installer.step1.selectUseRepoOptions.public.networkLost.popup.msg2': 'If you are using an Internet Proxy, refer to the Viettel Data Platform Documentation on how to configure Viettel Data Platform to use the Internet Proxy.',
   'installer.step1.selectUseRepoOptions.public.networkLost.popup.msg3': 'Use the Local Repositoy option.',
   'installer.step1.selectUseRepoOptions.public.networkLost.popup.msg4': 'If you do not have internet access and select this option, you will fail the Repository Base URL validation.',
   'installer.step1.selectUseRepoOptions.public.select':'Select Version',
@@ -674,7 +674,7 @@ Em.I18n.translations = {
   'installer.step1.advancedRepo.useRedhatSatellite.disabled.tooltip':'Use of RedHat Satellite/Spacewalk is not available when is using Public Repositories',
   'installer.step1.advancedRepo.skipValidation.message':'Skip Repository Base URL validation (Advanced)',
   'installer.step1.advancedRepo.useRedhatSatellite.message': 'Use RedHat Satellite/Spacewalk',
-  'installer.step1.advancedRepo.useRedhatSatellite.warning': "In order for Ambari to install packages from the right" +
+  'installer.step1.advancedRepo.useRedhatSatellite.warning': "In order for Viettel Data Platform to install packages from the right" +
   " repositories, it is recommended that you edit the names of the repo's for each operating system so they match " +
   "the channel names in your RedHat Satellite/Spacewalk instance.",
   'installer.step1.addOs.disabled.tooltip':'All Operating Systems have been added',
@@ -699,7 +699,7 @@ Em.I18n.translations = {
   'installer.step2.passphrase.error.match':'Passphrases do not match',
   'installer.step2.manualInstall.label':'Do not use SSH to automatically configure hosts ',
   'installer.step2.manualInstall.info':'By not using SSH to connect to the target hosts, you must manually install and' +
-    ' start the Ambari Agent on each host in order for the wizard to perform the necessary configurations and' +
+    ' start the Viettel Data Platform Agent on each host in order for the wizard to perform the necessary configurations and' +
     ' software installs.',
   'installer.step2.advancedOption':'Advanced Options',
   'installer.step2.repoConf':'Software Repository Configuration File Path',
@@ -715,22 +715,22 @@ Em.I18n.translations = {
     'access locally and this is called a <b>Local Software Repository</b>',
   'installer.step2.javaHome.label' : 'Path to 64-bit JDK',
   'installer.step2.javaHome.tooltip.title' : 'JAVA_HOME',
-  'installer.step2.javaHome.tooltip.content' : 'Path to 64-bit JAVA_HOME. /usr/jdk/jdk1.6.0_31 is the default used by Ambari. You can override this to a specific path that contains the JDK. <br/> Note: the path must be valid on <b>ALL</b> hosts in your cluster.',
+  'installer.step2.javaHome.tooltip.content' : 'Path to 64-bit JAVA_HOME. /usr/jdk/jdk1.6.0_31 is the default used by Viettel Data Platform. You can override this to a specific path that contains the JDK. <br/> Note: the path must be valid on <b>ALL</b> hosts in your cluster.',
   'installer.step2.javaHome.tooltip.placeholder' : '/usr/jdk/jdk1.6.0_31',
   'installer.step2.automaticInstall.tooltip.title':'automatic registration',
-  'installer.step2.automaticInstall.tooltip.content':'Ambari will automatically install and register the Ambari Agent on each host prior to the cluster installation.',
+  'installer.step2.automaticInstall.tooltip.content':'Viettel Data Platform will automatically install and register the Viettel Data Platform Agent on each host prior to the cluster installation.',
   'installer.step2.useSsh.provide' : 'Provide your',
   'installer.step2.useSsh.provide_id_rsa' : ' to automatically register hosts',
   'installer.step2.useSsh.tooltip.title':'SSH Private Key',
-  'installer.step2.useSsh.tooltip.content':'The <b>SSH Private Key File</b> is used to connect to the target hosts in your cluster to install the Ambari Agent.',
+  'installer.step2.useSsh.tooltip.content':'The <b>SSH Private Key File</b> is used to connect to the target hosts in your cluster to install the Viettel Data Platform Agent.',
   'installer.step2.install.perform':'Perform',
   'installer.step2.install.perform_on_hosts':'on hosts',
   'installer.step2.install.without_ssh':' and do not use SSH',
   'installer.step2.manualInstall.tooltip.title':'manual registration',
-  'installer.step2.manualInstall.tooltip.content':'Manually registering the Ambari Agent on each host eliminates the need for SSH and should be performed prior to continuing cluster installation.',
-  'installer.step2.manualInstall.tooltip.content_no_ssh':'Manually registering the Ambari Agent on each host should be performed prior to continuing cluster installation.',
+  'installer.step2.manualInstall.tooltip.content':'Manually registering the Viettel Data Platform Agent on each host eliminates the need for SSH and should be performed prior to continuing cluster installation.',
+  'installer.step2.manualInstall.tooltip.content_no_ssh':'Manually registering the Viettel Data Platform Agent on each host should be performed prior to continuing cluster installation.',
   'installer.step2.manualInstall.popup.header':'Before You Proceed',
-  'installer.step2.manualInstall.popup.body':'You must install Ambari Agents on each host you want to manage before you proceed.',
+  'installer.step2.manualInstall.popup.body':'You must install Viettel Data Platform Agents on each host you want to manage before you proceed.',
   'installer.step2.warning.popup.body':'<p>The following hostnames are not valid FQDNs:</p><p> {0} </p><p>This may cause problems during installation. Do you want to continue?</p>',
   'installer.step2.orUse':'Or use',
   'installer.step2.registerAndConfirm':'Register and Confirm',
@@ -738,20 +738,20 @@ Em.I18n.translations = {
   'installer.step2.evaluateStep.continueConfirm':'Do you want to continue?',
   'installer.step2.evaluateStep.hostRegInProgress':'Host Registration is currently in progress.  Please try again later.',
   'installer.step2.sshUser':'SSH User Account',
-  'installer.step2.sshUser.toolTip':'The user account used to install the Ambari Agent on the target host(s) via SSH. This user must be set up with passwordless SSH and sudo access on all the target host(s)',
+  'installer.step2.sshUser.toolTip':'The user account used to install the Viettel Data Platform Agent on the target host(s) via SSH. This user must be set up with passwordless SSH and sudo access on all the target host(s)',
   'installer.step2.sshUser.placeholder':'Enter user name',
   'installer.step2.sshUser.required':'User name is required',
   'installer.step2.sshPort':'SSH Port Number',
   'installer.step2.sshPort.toolTip':'SSH Port Number',
   'installer.step2.sshPort.required':'SSH Port Number is required.',
-  'installer.step2.agentUser':'Ambari Agent User Account',
-  'installer.step2.agentUser.toolTip':'The user account used to run the Ambari Agent daemon on the target host(s). This user must be set up with passwordless sudo access on all the target host(s)',
-  'installer.step2.bootStrap.error':'Errors were encountered while setting up Ambari Agents on the hosts.',
-  'installer.step2.bootStrap.inProgress':'Please wait while Ambari Agents are being set up on the hosts. This can take several minutes depending on the number of hosts.',
-  'installer.step2.bootStrap.header':'Setting Up Ambari Agents',
+  'installer.step2.agentUser':'Viettel Data Platform Agent User Account',
+  'installer.step2.agentUser.toolTip':'The user account used to run the Viettel Data Platform Agent daemon on the target host(s). This user must be set up with passwordless sudo access on all the target host(s)',
+  'installer.step2.bootStrap.error':'Errors were encountered while setting up Viettel Data Platform Agents on the hosts.',
+  'installer.step2.bootStrap.inProgress':'Please wait while Viettel Data Platform Agents are being set up on the hosts. This can take several minutes depending on the number of hosts.',
+  'installer.step2.bootStrap.header':'Setting Up Viettel Data Platform Agents',
   'installer.step2.skipHostChecks.label': 'Skip host checks',
   'installer.step2.skipHostChecks.popup.header': 'Warning',
-  'installer.step2.skipHostChecks.popup.body': 'By skipping host checks, Ambari will not check and warn if any issues with the host are identified and the host will be added to the cluster as is.',
+  'installer.step2.skipHostChecks.popup.body': 'By skipping host checks, Viettel Data Platform will not check and warn if any issues with the host are identified and the host will be added to the cluster as is.',
 
   'installer.step3.header':'Confirm Hosts',
   'installer.step3.body':'Registering your hosts.<br>' +
@@ -800,7 +800,7 @@ Em.I18n.translations = {
   'installer.step3.hostWarningsPopup.thp.context':'{0}',
   'installer.step3.hostWarningsPopup.thp.message':'The following hosts have Transparent Huge Pages (THP) enabled. THP should be disabled to avoid potential Hadoop performance issues.',
   'installer.step3.hostWarningsPopup.firewall':'Firewall Issues',
-  'installer.step3.hostWarningsPopup.firewall.message':'Firewall is running on the following hosts. Please configure the firewall to allow communications on the ports documented in the <i>Configuring Ports</i> section of  the <a target=\"_blank\" href=\"http://ambari.apache.org/current/installing-hadoop-using-ambari/content/\">Ambari documentation</a>',
+  'installer.step3.hostWarningsPopup.firewall.message':'Firewall is running on the following hosts. Please configure the firewall to allow communications on the ports documented in the <i>Configuring Ports</i> section of  the <a target=\"_blank\" href=\"http://ambari.apache.org/current/installing-hadoop-using-ambari/content/\">Viettel Data Platform documentation</a>',
   'installer.step3.hostWarningsPopup.process':'Process Issues',
   'installer.step3.hostWarningsPopup.processes.message':'The following processes should not be running',
   'installer.step3.hostWarningsPopup.fileAndFolder':'File and Folder Issues',
@@ -901,7 +901,7 @@ Em.I18n.translations = {
   'installer.step4.hcfs.displayName':'a Hadoop Compatible File System',
   'installer.step4.limitedFunctionality.popup.header':'Limited Functionality Warning',
   'installer.step4.ambariMetricsCheck.popup.header': 'Ambari Metrics',
-  'installer.step4.ambariMetricsCheck.popup.body':'Ambari Metrics collects metrics from the cluster and makes them available to Ambari.  If you do not install Ambari Metrics service, metrics will not be accessible from Ambari.  Are you sure you want to proceed without Ambari Metrics?',
+  'installer.step4.ambariMetricsCheck.popup.body':'Ambari Metrics collects metrics from the cluster and makes them available to Viettel Data Platform.  If you do not install Ambari Metrics service, metrics will not be accessible from Viettel Data Platform.  Are you sure you want to proceed without Ambari Metrics?',
   'installer.step4.ambariRangerInfraCheck.popup.header': 'Infra Solr',
   'installer.step4.ambariRangerInfraCheck.popup.body':'In order for Ranger to work, Solr is required. Either select Infra Solr to be added to the cluster, or ensure you configure your own during the Customize Services step.',
   'installer.step4.ambariAtlasInfraCheck.popup.header': 'Infra Solr',
@@ -924,7 +924,7 @@ Em.I18n.translations = {
   'installer.step4.rangerRequirements.popup.body.requirements': '<ol><li>You must have an <strong>MySQL/Oracle/Postgres/MSSQL/SQL Anywhere Server</strong> database instance running to be used by Ranger.</li>' +
     '<li>In Assign Masters step of this wizard, you will be prompted to specify which host for the Ranger Admin. On that host, you <strong>must have DB Client installed</strong> for Ranger to access to the database. (Note: This is applicable for only Ranger 0.4.0)</li>' +
     '<li>Ensure that the access for the DB Admin user is enabled in DB server from any host.</li>' +
-    '<li>Execute the following command on the Ambari Server host. Replace <code>database-type</code> with <strong>mysql|oracle|postgres|mssql|sqlanywhere</strong> and <code>/jdbc/driver/path</code> based on the location of corresponding JDBC driver:' +
+    '<li>Execute the following command on the Viettel Data Platform Server host. Replace <code>database-type</code> with <strong>mysql|oracle|postgres|mssql|sqlanywhere</strong> and <code>/jdbc/driver/path</code> based on the location of corresponding JDBC driver:' +
     '<pre>ambari-server setup --jdbc-db={database-type} --jdbc-driver={/jdbc/driver/path}</pre></li></ol>',
   'installer.step4.rangerRequirements.popup.body.confirmation': 'I have met all the requirements above.',
   'installer.step4.sparkWarning.popup.body': 'Spark requires HDP 2.2.2 or later. Attempting to install Spark to a HDP 2.2.0 cluster will fail. Confirm you are using HDP 2.2.2 or later packages. Are you sure you want to proceed?',
@@ -958,7 +958,7 @@ Em.I18n.translations = {
   'installer.step7.body':'We have come up with recommended configurations for the services you selected. Customize them as you see fit.',
   'installer.step7.credentialsTab.body':'Please provide credentials for these services',
   'installer.step7.databasesTab.body':'Please choose and configure the appropriate databases for these services',
-  'installer.step7.databasesTab.radioButton.default':'Use Ambari Database',
+  'installer.step7.databasesTab.radioButton.default':'Use Viettel Data Platform Database',
   'installer.step7.databasesTab.radioButton.custom':'Use Custom Database',
   'installer.step7.credentialsTab.usersGroups':'Users/Groups',
   'installer.step7.credentialsTab.usernames':'Usernames',
@@ -976,7 +976,7 @@ Em.I18n.translations = {
   'installer.step7.popup.rddWarning.header':'Warning: disk space low on {0}',
   'installer.step7.popup.rddWarning.body':'A minimum of 16GB is recommended for the Ganglia Server logs but the disk mount "{0}" on {1} does not have enough space ({2} free). Go to the Misc tab and change Ganglia rrdcached base directory with more than 16GB of disk space. If you proceed without changing it, {1} will likely run out of disk space and become inoperable.',
   'installer.step7.popup.mySQLWarning.header':'Error: New MySQL Database for Hive Conflict',
-  'installer.step7.popup.mySQLWarning.body':'You cannot install a \"New MySQL Database\" for Hive on the same host as the Ambari Server MySQL Server. Please go back to <b>Assign Masters</b> and reassign Hive to another host <b>OR</b> choose \"Existing MySQL Database\" option to specify the Database Credentials and URL for the Ambari Server MySQL Server instance. If you choose \"Existing MySQL Database\" option, you need to perform the Hive prerequisite steps to prepare the MySQL Server instance for Hive.',
+  'installer.step7.popup.mySQLWarning.body':'You cannot install a \"New MySQL Database\" for Hive on the same host as the Viettel Data Platform Server MySQL Server. Please go back to <b>Assign Masters</b> and reassign Hive to another host <b>OR</b> choose \"Existing MySQL Database\" option to specify the Database Credentials and URL for the Viettel Data Platform Server MySQL Server instance. If you choose \"Existing MySQL Database\" option, you need to perform the Hive prerequisite steps to prepare the MySQL Server instance for Hive.',
   'installer.step7.popup.mySQLWarning.button.gotostep5': 'Go to Assign Masters',
   'installer.step7.popup.mySQLWarning.button.dismiss': 'Dismiss',
   'installer.step7.popup.mySQLWarning.confirmation.header': 'Confirmation: Go to Assign Masters',
@@ -1015,14 +1015,14 @@ Em.I18n.translations = {
   'assign.master.popup.header':'Select {0} host',
   'assign.master.popup.cancel.body':'Not selecting {0} host will disable interactive query.',
   'installer.step7.recommendations.popover.header': 'Review Recommendations',
-  'installer.step7.recommendations.popover.message': '<p>Based on your configuration changes, Ambari is recommending the following dependent configuration changes. Ambari has updated all checked configuration changes to the <strong>Recommended Value</strong>. Uncheck any configuration to retain the <strong>Original Value</strong>.</p>',
+  'installer.step7.recommendations.popover.message': '<p>Based on your configuration changes, Viettel Data Platform is recommending the following dependent configuration changes. Viettel Data Platform has updated all checked configuration changes to the <strong>Recommended Value</strong>. Uncheck any configuration to retain the <strong>Original Value</strong>.</p>',
   'installer.step7.requirements.popover.header': 'Required Configurations',
   'installer.step7.requirements.popover.message': '<p>The following properties must be set to proceed with the install.</p>',
 
   'installer.step8.header': 'Review',
   'installer.step8.body': 'Please review the configuration before installation',
   'installer.step8.kerberors.warning': '<strong>Because Kerberos has been manually installed on the cluster, you will have to create/distribute principals and keytabs when this operation is finished.</strong>',
-  'installer.step8.generateBlueprint.popup.msg': 'You will be <b>downloading</b> blueprint.json and clustertemplate.json to your local machine. <br/><br/> You can use them to deploy a cluster via AMBARI REST API. <br/> Update clustertemplate.json with a custom cluster name if you do not want to use name <b>{0}</b>. <br/><br/>If you want to use custom repo URLs, make sure to update them via Ambari REST API before deploying the cluster.',
+  'installer.step8.generateBlueprint.popup.msg': 'You will be <b>downloading</b> blueprint.json and clustertemplate.json to your local machine. <br/><br/> You can use them to deploy a cluster via AMBARI REST API. <br/> Update clustertemplate.json with a custom cluster name if you do not want to use name <b>{0}</b>. <br/><br/>If you want to use custom repo URLs, make sure to update them via Viettel Data Platform REST API before deploying the cluster.',
   'installer.step8.deployPopup.message':'Preparing to Deploy: {0} of {1} tasks completed.',
   'installer.step8.deployPopup.header':'Initializing Tasks',
   'installer.step8.hosts':' hosts',
@@ -1041,9 +1041,9 @@ Em.I18n.translations = {
   'installer.step9.status.failed':'Failed to install/start the services.',
   'installer.step9.status.start.services.failed':'Start all services API call failed.',
   'installer.step9.status.install.components.failed': 'Some service components are still not known to have installed successfully. Please Retry',
-  'installer.step9.status.hosts.heartbeat_lost': 'Ambari agent is not running on {0} hosts.',
+  'installer.step9.status.hosts.heartbeat_lost': 'Viettel Data Platform agent is not running on {0} hosts.',
   'installer.step9.host.heartbeat_lost': 'Heartbeat lost for the host',
-  'installer.step9.host.heartbeat_lost_popup': 'Ambari agent process is not heartbeating on the host',
+  'installer.step9.host.heartbeat_lost_popup': 'Viettel Data Platform agent process is not heartbeating on the host',
   'installer.step9.host.heartbeat_lost.header' : 'Hosts with heartbeat lost',
   'installer.step9.host.status.success':'Success',
   'installer.step9.host.status.startAborted':'Install completed. Start aborted',
@@ -1062,7 +1062,7 @@ Em.I18n.translations = {
   'installer.step9.hostLog.popup.categories.aborted':'Aborted',
   'installer.step9.hostLog.popup.categories.timedout':'Timed Out',
   'installer.step9.hostLog.popup.noTasksToShow':'No tasks to show',
-  'installer.step9.host.status.noTasks': 'Ambari server did not schedule any tasks on the host. Either the service component on the host is already in installed state <b>OR</b> the pre-check of host reachability failed.',
+  'installer.step9.host.status.noTasks': 'Viettel Data Platform server did not schedule any tasks on the host. Either the service component on the host is already in installed state <b>OR</b> the pre-check of host reachability failed.',
   'installer.step9.overallProgress':'{0} % overall',
   'installer.step9.serviceStatus.install.pending':'Preparing to install ',
   'installer.step9.serviceStatus.install.queued':'Waiting to install ',
@@ -1155,7 +1155,7 @@ Em.I18n.translations = {
   'alerts.add.wizard.step1.body.port.description':'Check TCP connectivity to a remote endpoint',
   'alerts.add.wizard.step1.body.web.description':'Check for TCP connectivity and verify that a proper HTTP response code was returned',
   'alerts.add.wizard.step1.body.metric.description':'Define JMX/AMS endpoints that can be queried for values',
-  'alerts.add.wizard.step1.body.script.description':'Defer all functionality to a Python script accessible to the Ambari agents from a specified relative or absolute path',
+  'alerts.add.wizard.step1.body.script.description':'Defer all functionality to a Python script accessible to the Viettel Data Platform agents from a specified relative or absolute path',
   'alerts.add.wizard.step1.body.aggregate.description':'Combine the results of another alert definition from different nodes',
   'alerts.add.wizard.step1.body.raw.description':'User can upload alert parameter using a JSON script',
 
@@ -1171,7 +1171,7 @@ Em.I18n.translations = {
   'alerts.actions.editRepeatTolerance.header': 'Edit Alert Check Count',
   'alerts.actions.editRepeatTolerance.title': 'Alert Check Counts',
   'alerts.actions.editRepeatTolerance.description': 'Set the number of alert checks to perform before dispatching a notification. ' +
-    'If during an alert check a state change occurs, Ambari will attempt to check this number of times before dispatching a notification. ' +
+    'If during an alert check a state change occurs, Viettel Data Platform will attempt to check this number of times before dispatching a notification. ' +
     'Increase this number if your environment experiences transient issues resulting in false alerts.',
   'alerts.actions.editRepeatTolerance.label': 'Check Count:',
   'alerts.actions.editRepeatTolerance.error':'Input should be an integer between 1 and 99.',
@@ -1252,7 +1252,7 @@ Em.I18n.translations = {
   'admin.audit.grid.performedBy':"Performed By",
   'admin.audit.grid.service':"Category",
 
-  'admin.authentication.form.method.database':'Use Ambari Database to authenticate users',
+  'admin.authentication.form.method.database':'Use Viettel Data Platform Database to authenticate users',
   'admin.authentication.form.method.ldap':'Use LDAP/Active Directory to authenticate',
   'admin.authentication.form.primaryServer':'Primary Server',
   'admin.authentication.form.secondaryServer':'Secondary Server',
@@ -1271,14 +1271,14 @@ Em.I18n.translations = {
   'admin.authentication.form.test.fail':'The configuration fails the test',
 
 
-  'admin.kerberos.credentials.store.hint.supported': 'When checked, Ambari will store the KDC Admin credentials so they are not required to be re-entered during future changes of services, hosts, and components.',
-  'admin.kerberos.credentials.store.hint.not.supported': 'Ambari is not configured for storing credentials',
+  'admin.kerberos.credentials.store.hint.supported': 'When checked, Viettel Data Platform will store the KDC Admin credentials so they are not required to be re-entered during future changes of services, hosts, and components.',
+  'admin.kerberos.credentials.store.hint.not.supported': 'Viettel Data Platform is not configured for storing credentials',
   'admin.kerberos.credentials.store.label': 'Save Admin Credentials',
   'admin.kerberos.credentials.store.menu.label': 'Manage KDC Credentials',
   'admin.kerberos.credentials.form.header.stored': 'Update or remove the stored KDC Credentials in the encrypted credential store.',
   'admin.kerberos.credentials.form.header.not.stored': 'Specify the KDC Admin Credentials to remember in the encrypted credential store.',
   'admin.kerberos.credentials.remove.confirmation.header': 'Remove KDC Credentials Confirmation',
-  'admin.kerberos.credentials.remove.confirmation.body': 'You are about to remove the KDC Credentials from Ambari. Are you sure?',
+  'admin.kerberos.credentials.remove.confirmation.body': 'You are about to remove the KDC Credentials from Viettel Data Platform. Are you sure?',
   'admin.kerberos.wizard.configuration.note': 'This is the initial configuration created by Enable Kerberos wizard.',
   'admin.kerberos.wizard.header':'Enable Kerberos Wizard',
   'admin.kerberos.button.enable': 'Enable Kerberos',
@@ -1295,31 +1295,31 @@ Em.I18n.translations = {
   'admin.kerberos.wizard.step6.header': 'Stop Services',
   'admin.kerberos.wizard.step7.header': 'Kerberize Cluster',
   'admin.kerberos.wizard.step8.header': 'Start and Test Services',
-  'admin.kerberos.wizard.step1.info.body': 'Welcome to the Ambari Security Wizard. Use this wizard to enable kerberos security in your cluster. </br>Let\'s get started.',
+  'admin.kerberos.wizard.step1.info.body': 'Welcome to the Viettel Data Platform Security Wizard. Use this wizard to enable kerberos security in your cluster. </br>Let\'s get started.',
   'admin.kerberos.wizard.step1.alert.body': 'Note: This process requires services to be restarted and cluster downtime. As well, depending on the options you select, might require support from your Security administrators. Please plan accordingly.',
   'admin.kerberos.wizard.step1.body.text': 'What type of KDC do you plan on using?',
   'admin.kerberos.wizard.step1.option.kdc': 'Existing MIT KDC',
-  'admin.kerberos.wizard.step1.option.kdc.condition.1': 'Ambari Server and cluster hosts have network access to both the KDC and KDC admin hosts.',
+  'admin.kerberos.wizard.step1.option.kdc.condition.1': 'Viettel Data Platform Server and cluster hosts have network access to both the KDC and KDC admin hosts.',
   'admin.kerberos.wizard.step1.option.kdc.condition.2': 'KDC administrative credentials are on-hand.',
-  'admin.kerberos.wizard.step1.option.kdc.condition.3': 'The Java Cryptography Extensions (JCE) have been setup on the Ambari Server host and all hosts in the cluster.',
+  'admin.kerberos.wizard.step1.option.kdc.condition.3': 'The Java Cryptography Extensions (JCE) have been setup on the Viettel Data Platform Server host and all hosts in the cluster.',
   'admin.kerberos.wizard.step1.option.kdc.condition.4': 'The Isilon administrator has setup all appropriate principals in OneFS',
   'admin.kerberos.wizard.step1.option.manual': 'Manage Kerberos principals and keytabs manually',
   'admin.kerberos.wizard.step1.option.manual.condition.1': 'Cluster hosts have network access to the KDC',
   'admin.kerberos.wizard.step1.option.manual.condition.2': 'Kerberos client utilities (such as kinit) have been installed on every cluster host',
-  'admin.kerberos.wizard.step1.option.manual.condition.3': 'The Java Cryptography Extensions (JCE) have been setup on the Ambari Server host and all hosts in the cluster',
-  'admin.kerberos.wizard.step1.option.manual.condition.4': 'The Service and Ambari Principals will be manually created in the KDC before completing this wizard',
-  'admin.kerberos.wizard.step1.option.manual.condition.5': 'The keytabs for the Service and Ambari Principals will be manually created and distributed to cluster hosts before completing this wizard',
+  'admin.kerberos.wizard.step1.option.manual.condition.3': 'The Java Cryptography Extensions (JCE) have been setup on the Viettel Data Platform Server host and all hosts in the cluster',
+  'admin.kerberos.wizard.step1.option.manual.condition.4': 'The Service and Viettel Data Platform Principals will be manually created in the KDC before completing this wizard',
+  'admin.kerberos.wizard.step1.option.manual.condition.5': 'The keytabs for the Service and Viettel Data Platform Principals will be manually created and distributed to cluster hosts before completing this wizard',
   'admin.kerberos.wizard.step1.option.ad': 'Existing Active Directory',
-  'admin.kerberos.wizard.step1.option.ad.condition.1': 'Ambari Server and cluster hosts have network access to the Domain Controllers.',
+  'admin.kerberos.wizard.step1.option.ad.condition.1': 'Viettel Data Platform Server and cluster hosts have network access to the Domain Controllers.',
   'admin.kerberos.wizard.step1.option.ad.condition.2': 'Active Directory secure LDAP (LDAPS) connectivity has been configured.',
   'admin.kerberos.wizard.step1.option.ad.condition.3': 'Active Directory User container for principals has been created and is on-hand (e.g. OU=Hadoop,OU=People,dc=apache,dc=org)',
   'admin.kerberos.wizard.step1.option.ad.condition.4': 'Active Directory administrative credentials with delegated control of “Create, delete, and manage user accounts” on the previously mentioned User container are on-hand.',
-  'admin.kerberos.wizard.step1.option.ad.condition.5': 'The Java Cryptography Extensions (JCE) have been setup on the Ambari Server host and all hosts in the cluster.',
+  'admin.kerberos.wizard.step1.option.ad.condition.5': 'The Java Cryptography Extensions (JCE) have been setup on the Viettel Data Platform Server host and all hosts in the cluster.',
   'admin.kerberos.wizard.step1.option.ipa': 'Existing IPA',
   'admin.kerberos.wizard.step1.option.ipa.condition.1': 'All cluster hosts are joined to the IPA domain and hosts are registered in DNS',
   'admin.kerberos.wizard.step1.option.ipa.condition.2': 'A password policy is in place that sets no expiry for created principals',
-  'admin.kerberos.wizard.step1.option.ipa.condition.3': 'If you do not plan on using Ambari to manage the krb5.conf, ensure the following is set in each krb5.conf file in your cluster: default_ccache_name = /tmp/krb5cc_%{uid}',
-  'admin.kerberos.wizard.step1.option.ipa.condition.4': 'The Java Cryptography Extensions (JCE) have been setup on the Ambari Server host and all hosts in the cluster.',
+  'admin.kerberos.wizard.step1.option.ipa.condition.3': 'If you do not plan on using Viettel Data Platform to manage the krb5.conf, ensure the following is set in each krb5.conf file in your cluster: default_ccache_name = /tmp/krb5cc_%{uid}',
+  'admin.kerberos.wizard.step1.option.ipa.condition.4': 'The Java Cryptography Extensions (JCE) have been setup on the Viettel Data Platform Server host and all hosts in the cluster.',
   'admin.kerberos.wizard.step1.prerequisites.label': 'Following prerequisites needs to be checked to progress ahead in the wizard.',
   'admin.kerberos.wizard.step2.info.body': 'Please configure kerberos related properties.',
   'admin.kerberos.wizard.step3.task0.title': 'Install Kerberos Client',
@@ -1329,8 +1329,8 @@ Em.I18n.translations = {
   'admin.kerberos.wizard.progressPage.notice.inProgress': 'Please wait while cluster is being kerberized',
   'admin.kerberos.wizard.step4.info.body': 'Configure principal name and keytab location for service users and hadoop service components.',
   'admin.kerberos.wizard.step5.info.body': 'Please review the configuration before continuing the setup process',
-  'admin.kerberos.wizard.step5.moreInfoNonManual.body': 'Using the <b>Download CSV button</b>, you can download a csv file which contains a list of the principals and keytabs that will automatically be created by Ambari.',
-  'admin.kerberos.wizard.step5.moreInfoManual.body': 'Important: Use the <b>Download CSV</b> button to obtain a list of the <b>required</b> principals and keytabs that are needed by Ambari to enable Kerberos in the cluster. <b>Do not proceed</b> until you have manually created and distributed the principals and keytabs to the cluster hosts.',
+  'admin.kerberos.wizard.step5.moreInfoNonManual.body': 'Using the <b>Download CSV button</b>, you can download a csv file which contains a list of the principals and keytabs that will automatically be created by Viettel Data Platform.',
+  'admin.kerberos.wizard.step5.moreInfoManual.body': 'Important: Use the <b>Download CSV</b> button to obtain a list of the <b>required</b> principals and keytabs that are needed by Viettel Data Platform to enable Kerberos in the cluster. <b>Do not proceed</b> until you have manually created and distributed the principals and keytabs to the cluster hosts.',
   'admin.kerberos.wizard.step5.kdc_type.label': 'KDC Type',
   'admin.kerberos.wizard.step5.kdc_hosts.label': 'KDC Hosts',
   'admin.kerberos.wizard.step5.realm.label': 'Realm Name',
@@ -1414,8 +1414,8 @@ Em.I18n.translations = {
   'admin.manageJournalNode.wizard.step3.body.multipleNameSpaces.checkPointText': 'Once in Safe Mode, create Checkpoints',
   'admin.manageJournalNode.wizard.step3.body.singleNameSpace.checkPointCommand': 'sudo su {0} -l -c \'hdfs dfsadmin -saveNamespace\'',
   'admin.manageJournalNode.wizard.step3.body.multipleNameSpaces.checkPointCommand': 'sudo su {0} -l -c \'hdfs dfsadmin -fs hdfs://{1} -saveNamespace\'',
-  'admin.manageJournalNode.wizard.step3.body.singleNameSpace.proceed': 'You will be able to proceed once Ambari detects that the NameNode is in Safe Mode and the Checkpoint has been created successfully.',
-  'admin.manageJournalNode.wizard.step3.body.multipleNameSpaces.proceed': 'You will be able to proceed once Ambari detects that the NameNodes are in Safe Mode and the Checkpoints have been created successfully.',
+  'admin.manageJournalNode.wizard.step3.body.singleNameSpace.proceed': 'You will be able to proceed once Viettel Data Platform detects that the NameNode is in Safe Mode and the Checkpoint has been created successfully.',
+  'admin.manageJournalNode.wizard.step3.body.multipleNameSpaces.proceed': 'You will be able to proceed once Viettel Data Platform detects that the NameNodes are in Safe Mode and the Checkpoints have been created successfully.',
   'admin.manageJournalNode.wizard.step3.body.singleNameSpace.recentCheckPoint': 'If the <b>Next</b> button is enabled before you run the <b>"Step 3: Save Namespace"</b> command, it means there is a recent Checkpoint already and you may proceed without running the <b>"Step 3: Save Namespace"</b> command.',
   'admin.manageJournalNode.wizard.step3.body.multipleNameSpaces.recentCheckPoint': 'If the <b>Next</b> button is enabled before you run the <b>"Step 3: Save Namespace"</b> commands, it means there are recent Checkpoints already and you may proceed without running the <b>"Step 3: Save Namespace"</b> commands.',
   'admin.manageJournalNode.wizard.step3.body':
@@ -1450,7 +1450,7 @@ Em.I18n.translations = {
   'admin.rm_highAvailability.enabled':'ResourceManager HA is enabled',
   'admin.highAvailability.confirmRollbackHeader':'Confirm Rollback',
   'admin.highAvailability.confirmRollbackBody':'This will rollback all operations that were done in HA wizard',
-  'admin.highAvailability.confirmManualRollbackBody':'You are in the process of enabling NameNode HA. If you exit now, you must follow manual instructions to revert back to the non-HA setup as documented in the Ambari User Guide\'s <i>Rolling Back NameNode HA</i> section.  Are you sure you want to exit the wizard?',
+  'admin.highAvailability.confirmManualRollbackBody':'You are in the process of enabling NameNode HA. If you exit now, you must follow manual instructions to revert back to the non-HA setup as documented in the Viettel Data Platform User Guide\'s <i>Rolling Back NameNode HA</i> section.  Are you sure you want to exit the wizard?',
   'admin.highAvailability.error.hostsNum':'You must have at least 3 hosts in your cluster to enable NameNode HA.',
   'admin.highAvailability.error.namenodeStarted':'NameNode must be running before you enable NameNode HA.',
   'admin.highAvailability.error.maintenanceMode':'In order to enable NameNode HA, all services, and hosts with master components need to be out of Maintenance Mode.',
@@ -1458,7 +1458,7 @@ Em.I18n.translations = {
   'admin.rm_highAvailability.error.hostsNum':'You must have at least 3 hosts in your cluster to enable ResourceManager HA.',
   'admin.rm_highAvailability.error.zooKeeperNum':'You must have at least 3 ZooKeeper Servers in your cluster to enable ResourceManager HA.',
   'admin.rm_highAvailability.error.resourceManagerStarted':'ResourceManager must be running before you enable ResourceManager HA.',
-  'admin.rm_highAvailability.closePopup':'Enable ResourceManager HA Wizard is in progress. You must allow the wizard to complete for Ambari to be in usable state. If you choose to quit, you must follow manual instructions to complete or revert enabling ResourceManager HA as documented in the Ambari User Guide. Are you sure you want to exit the wizard?',
+  'admin.rm_highAvailability.closePopup':'Enable ResourceManager HA Wizard is in progress. You must allow the wizard to complete for Viettel Data Platform to be in usable state. If you choose to quit, you must follow manual instructions to complete or revert enabling ResourceManager HA as documented in the Viettel Data Platform User Guide. Are you sure you want to exit the wizard?',
 
   'admin.highAvailability.wizard.header':'Enable NameNode HA Wizard',
   'admin.highAvailability.wizard.progressPage.notice.inProgress':'Please wait while NameNode HA is being deployed.',
@@ -1585,7 +1585,7 @@ Em.I18n.translations = {
     '<li>Login to the NameNode host <b>{1}</b>.</li>' +
     '<li>Initialize the JournalNodes by running:' +
     '<div class="code-snippet">sudo su {0} -l -c \'hdfs namenode -initializeSharedEdits\'</div></li>' +
-    '<li>You will be able to proceed once Ambari detects that the JournalNodes have been initialized successfully.</li>' +
+    '<li>You will be able to proceed once Viettel Data Platform detects that the JournalNodes have been initialized successfully.</li>' +
     '</ol>',
   'admin.highAvailability.wizard.step4.body':
     '<ol>' +
@@ -1594,7 +1594,7 @@ Em.I18n.translations = {
     '<div class="code-snippet">sudo su {0} -l -c \'hdfs dfsadmin -safemode enter\'</div></li>' +
     '<li>Once in Safe Mode, create a Checkpoint:' +
     '<div class="code-snippet">sudo su {0} -l -c \'hdfs dfsadmin -saveNamespace\'</div></li>' +
-    '<li>You will be able to proceed once Ambari detects that the NameNode is in Safe Mode and the Checkpoint has been created successfully.</li>'+
+    '<li>You will be able to proceed once Viettel Data Platform detects that the NameNode is in Safe Mode and the Checkpoint has been created successfully.</li>'+
     '<div class="alert alert-warning">If the <b>Next</b> button is enabled before you run the <b>"Step 4: Create a Checkpoint"</b> command, it means there is a recent Checkpoint already and you may proceed without running the <b>"Step 4: Create a Checkpoint"</b> command.</div>' +
     '</ol>',
   'admin.highAvailability.wizard.step3.confirm.host.body':'<b>Confirm your host selections.</b>',
@@ -1668,17 +1668,17 @@ Em.I18n.translations = {
   'admin.ra_highAvailability.wizard.step4.task3.title': 'Start All Services',
   'admin.ra_highAvailability.wizard.step4.notice.inProgress': 'Please wait while Ranger Admin HA is being deployed.',
   'admin.ra_highAvailability.wizard.step4.notice.completed': 'Ranger Admin HA has been enabled successfully.',
-  'admin.ra_highAvailability.closePopup':'Enable Ranger Admin HA Wizard is in progress. You must allow the wizard to complete for Ambari to be in usable state. ' +
-  'If you choose to quit, you must follow manual instructions to complete or revert enabling Ranger Admin HA as documented in the Ambari User Guide. Are you sure you want to exit the wizard?',
+  'admin.ra_highAvailability.closePopup':'Enable Ranger Admin HA Wizard is in progress. You must allow the wizard to complete for Viettel Data Platform to be in usable state. ' +
+  'If you choose to quit, you must follow manual instructions to complete or revert enabling Ranger Admin HA as documented in the Viettel Data Platform User Guide. Are you sure you want to exit the wizard?',
 
   'admin.nameNodeFederation.button.enable':'Add New HDFS Namespace',
   'admin.nameNodeFederation.wizard.required.zookeepers': 'All ZooKeeper Servers should be up',
   'admin.nameNodeFederation.wizard.required.journalnodes': 'All JournalNodes should be up',
   'admin.nameNodeFederation.wizard.header': 'Add New HDFS Namespace',
   'admin.nameNodeFederation.closePopup': 'Are you sure you want to quit?',
-  'admin.nameNodeFederation.closePopup2': 'Add New HDFS Namespace Wizard is in progress. You must allow the wizard to complete for Ambari to be in usable state. If you choose to quit, you must follow manual instructions to complete or revert Add New HDFS Namespace as documented in the Ambari User Guide. Are you sure you want to exit the wizard?',
+  'admin.nameNodeFederation.closePopup2': 'Add New HDFS Namespace Wizard is in progress. You must allow the wizard to complete for Viettel Data Platform to be in usable state. If you choose to quit, you must follow manual instructions to complete or revert Add New HDFS Namespace as documented in the Viettel Data Platform User Guide. Are you sure you want to exit the wizard?',
   'admin.nameNodeFederation.wizard.step1.header': 'Get Started',
-  'admin.nameNodeFederation.wizard.step1.body':'This wizard will walk you through the process of setting up a new Highly Available NameNode pair that will be used to create a new HDFS namespace, allowing you to use Ambari to manage multiple HDFS namespaces and take advantage of HDFS Federation.',
+  'admin.nameNodeFederation.wizard.step1.body':'This wizard will walk you through the process of setting up a new Highly Available NameNode pair that will be used to create a new HDFS namespace, allowing you to use Viettel Data Platform to manage multiple HDFS namespaces and take advantage of HDFS Federation.',
   'admin.nameNodeFederation.wizard.step1.alert':'You should plan a cluster maintenance window and prepare for cluster downtime when adding a new HDFS Namespace as this Wizard will restart all services.',
   'admin.nameNodeFederation.wizard.step1.nameserviceid':'New Nameservice ID',
   'admin.nameNodeFederation.wizard.step1.nameserviceid.existing':'Existing Nameservice ID',
@@ -1726,7 +1726,7 @@ Em.I18n.translations = {
   'admin.security.step2.header': 'Configure Services',
   'admin.security.step3.header': 'Create Principals and Keytabs',
   'admin.security.step4.header': 'Save and Apply Configuration',
-  'admin.security.step1.body.header': 'Important: Before configuring Ambari to manage your Kerberos-enabled cluster, ' +
+  'admin.security.step1.body.header': 'Important: Before configuring Viettel Data Platform to manage your Kerberos-enabled cluster, ' +
     'you must perform the following manual steps on your cluster. Be sure to record the location of the keytab files ' +
     'for each host and the principals for each Hadoop service. This information is required in order to use the wizard.',
   'admin.security.step1.body.instruction1': 'Install, configure and start your Kerberos KDC',
@@ -1754,7 +1754,7 @@ Em.I18n.translations = {
   'admin.removeSecurity.header': 'Disable Security',
   'admin.security.applying.config.header': 'Applying Configurations',
   'admin.security.applying.config.body':'You cannot quit wizard while configurations are being applied',
-  'admin.security.status.error' : 'Error in retrieving cluster security status from Ambari server',
+  'admin.security.status.error' : 'Error in retrieving cluster security status from Viettel Data Platform server',
   'admin.users.ldapAuthUsed':'LDAP Authentication is being used to authenticate users',
   'admin.users.delete.yourself.message':'You cannot delete yourself',
   'admin.users.delete.yourself.header':'Deleting warning',
@@ -1797,7 +1797,7 @@ Em.I18n.translations = {
   'admin.misc.nothingToShow': 'No user accounts to display',
 
   'admin.serviceAutoStart.title': "Service Auto Start",
-  'admin.serviceAutoStart.header.text': "Ambari services can be configured to start automatically on system boot. Each service can be configured to start all components, masters and workers, or selectively.",
+  'admin.serviceAutoStart.header.text': "Viettel Data Platform services can be configured to start automatically on system boot. Each service can be configured to start all components, masters and workers, or selectively.",
   'admin.serviceAutoStart.general.switcher': "Auto Start Settings",
   'admin.serviceAutoStart.tooltip.text': "{0} components enabled",
   'admin.serviceAutoStart.column.autoStart': "Auto Start",
@@ -1826,8 +1826,8 @@ Em.I18n.translations = {
   'admin.stackVersions.version.hostsInfoTooltip': "There are {0} hosts that do not need packages installed:<li>{1} Maintenance Mode</li><li>{2} Not Required</li>",
   'admin.stackVersions.manageVersions': "Manage Versions",
   'admin.stackVersions.manageVersions.popup.body': 'You are about to leave the <b>Cluster Management</b> interface' +
-    ' and go to the <b>Ambari Administration</b> interface. You can return to cluster management by using the' +
-    ' “Go to Dashboard” link in the Ambari Administration > Clusters section.',
+    ' and go to the <b>Viettel Data Platform Administration</b> interface. You can return to cluster management by using the' +
+    ' “Go to Dashboard” link in the Viettel Data Platform Administration > Clusters section.',
   'admin.stackVersions.version.installNow': "Install Packages",
   'admin.stackVersions.version.reinstall': "Reinstall Packages",
   'admin.stackVersions.version.installError': "Installation Error!",
@@ -1849,7 +1849,7 @@ Em.I18n.translations = {
   'admin.stackDowngrade.state.paused.fail.header': "Pause Downgrade failed",
   'admin.stackDowngrade.state.paused.fail.body': "Downgrade could not be paused. Try again later.",
   'admin.stackVersions.version.errors.outOfSync.title': 'Host component out of sync',
-  'admin.stackVersions.version.errors.outOfSync.desc': 'One of more host components did not report the version that Ambari expected.' +
+  'admin.stackVersions.version.errors.outOfSync.desc': 'One of more host components did not report the version that Viettel Data Platform expected.' +
   ' Please re-install the failed host component, or remove it.',
   'admin.stackVersions.version.errors.outOfSync.reinstall.title': 'Confirm Re-Install',
   'admin.stackVersions.version.errors.outOfSync.remove.title': 'Confirm Remove',
@@ -1884,7 +1884,7 @@ Em.I18n.translations = {
   'admin.stackVersions.version.upgrade.upgradeOptions.error': 'Could not proceed with upgrade:',
   'admin.stackVersions.version.upgrade.upgradeOptions.loading': 'Checking for supported upgrade types...',
 
-  'admin.stackVersions.version.upgrade.alertsWarning': 'Cluster alerts will still be visible and recorded in Ambari but notifications (such as Email and SNMP) will be suppressed during the upgrade.',
+  'admin.stackVersions.version.upgrade.alertsWarning': 'Cluster alerts will still be visible and recorded in Viettel Data Platform but notifications (such as Email and SNMP) will be suppressed during the upgrade.',
 
   'admin.stackVersions.version.preUpgrade.header' : 'Pre-Upgrade Check',
   'admin.stackVersions.version.preUpgrade.bodyMsg.version': 'The following checks have been run to test your ability to upgrade to <b>{0}</b>.',
@@ -1947,7 +1947,7 @@ Em.I18n.translations = {
   'admin.stackUpgrade.failedHosts.options.second': "Perform a <b>Downgrade</b>, which will revert all hosts to the previous stack version.",
   'admin.stackUpgrade.failedHosts.options.third': "Ignore these failures and <b>Proceed</b> for now (reconcile the failures later).",
   'admin.stackUpgrade.failedHosts.isOutOfSync.options.first' : '<b>Pause Upgrade</b> and restart the component',
-  'admin.stackUpgrade.failedHosts.isOutOfSync.options.second' : '<b>Restart</b> the Ambari Agent',
+  'admin.stackUpgrade.failedHosts.isOutOfSync.options.second' : '<b>Restart</b> the Viettel Data Platform Agent',
   'admin.stackUpgrade.failedHosts.header': "Failed Hosts",
   'admin.stackUpgrade.failedHosts.subHeader': "Upgrade failed on {0} hosts",
   'admin.stackUpgrade.failedHosts.details': "Open Details",
@@ -2123,7 +2123,7 @@ Em.I18n.translations = {
   'services.service.delete.popup.dependentServices': 'Prior to deleting <b>{0}</b>, you must delete the following dependent services:',
   'services.service.delete.popup.mustBeStopped': 'Prior to deleting <b>{0}</b>, you must stop the service and each slave and master component.',
   'services.service.delete.popup.mustBeStopped.dependent': ' Along with dependent service <b>{0}</b>.',
-  'services.service.delete.popup.warning': 'The <b>{0} service will be removed from Ambari and all configurations' +
+  'services.service.delete.popup.warning': 'The <b>{0} service will be removed from Viettel Data Platform and all configurations' +
   ' and configuration history will be lost.</b>',
   'services.service.delete.popup.warning.dependent': '<b> Note: The dependent {0} service will be removed too.</b>',
   'services.service.confirmDelete.popup.header': 'Confirm Delete',
@@ -2341,7 +2341,7 @@ Em.I18n.translations = {
   'services.service.config.database.btn.connecting': 'Connecting...',
   'services.service.config.database.msg.jdbcSetup': 'Be sure you have run:<br/>' +
     '<b>ambari-server setup --jdbc-db={0} --jdbc-driver=/path/to/{0}/{1}</b> ' +
-    'on the Ambari Server host to make the JDBC driver available and to enable testing the database connection.',
+    'on the Viettel Data Platform Server host to make the JDBC driver available and to enable testing the database connection.',
   'services.service.config.configHistory.configGroup': 'Config Group',
   'services.service.config.configHistory.rightArrow.tooltip': 'Show earlier versions',
   'services.service.config.configHistory.leftArrow.tooltip': 'Show later versions',
@@ -2350,7 +2350,7 @@ Em.I18n.translations = {
   'services.service.config.configHistory.comparing': 'Comparing Changes in',
   'services.service.config.setRecommendedValue': 'Set Recommended',
   'services.service.config.database.msg.jdbcSetup.detailed': 'To use {0} with {6}, you must <a rel="noopener noreferrer" href="{3}" target="_blank">' +
-    'download the {4} from {0}</a>. Once downloaded to the Ambari Server host, run: <br/>' +
+    'download the {4} from {0}</a>. Once downloaded to the Viettel Data Platform Server host, run: <br/>' +
     '<b>ambari-server setup --jdbc-db={1} --jdbc-driver=/path/to/{1}/{2}</b>',
 
   'services.service.widgets.list-widget.nothingSelected': 'Nothing selected',
@@ -2413,7 +2413,7 @@ Em.I18n.translations = {
   'services.service.config_groups.rename_config_group_popup.header':'Rename Configuration Group',
   'services.service.config_groups.switchGroupTextFull':'Switch to \'{0}\' host config group',
   'services.service.config_groups.switchGroupTextShort':'Switch to \'{0}\'',
-  'services.reassign.closePopup':'Move {0} wizard is in progress. You must allow the wizard to complete for Ambari to be in usable state. If you choose to quit, you must follow manual instructions to complete or revert move {0} wizard as documented in the Ambari User Guide. Are you sure you want to exit the wizard?',
+  'services.reassign.closePopup':'Move {0} wizard is in progress. You must allow the wizard to complete for Viettel Data Platform to be in usable state. If you choose to quit, you must follow manual instructions to complete or revert move {0} wizard as documented in the Viettel Data Platform User Guide. Are you sure you want to exit the wizard?',
   'services.reassign.error.fewHosts':'You must have at least 2 hosts in your cluster to run Move Wizard.',
 
   'services.reassign.step1.header':'Get Started',
@@ -2725,9 +2725,9 @@ Em.I18n.translations = {
   'hosts.bulkOperation.deleteHosts.cannot.delete1':'The following hosts will be skipped (expand for reason):',
   'hosts.bulkOperation.deleteHosts.cannot.delete2':'Selected hosts cannot be deleted (expand for reason)',
   'hosts.bulkOperation.deleteHosts.confirmation.header':'Confirm Bulk Delete Hosts',
-  'hosts.bulkOperation.deleteHosts.confirmation.body.msg1': '<b>Please note: </b>Once removed, Ambari will ignore future communications from these hosts. As part of the removal process, packages will not be removed, so please do not attempt to manually start the services on the host once they have been removed from Ambari. If you wish to re-add the hosts to the cluster, please completely clean the hosts before attempting to add them.',
-  'hosts.bulkOperation.deleteHosts.confirmation.body.msg2': 'To ensure they are completely removed from Ambari database,',
-  'hosts.bulkOperation.deleteHosts.confirmation.body.msg3': 'please make sure the Ambari Agent process is completely stopped on these hosts before proceeding.',
+  'hosts.bulkOperation.deleteHosts.confirmation.body.msg1': '<b>Please note: </b>Once removed, Viettel Data Platform will ignore future communications from these hosts. As part of the removal process, packages will not be removed, so please do not attempt to manually start the services on the host once they have been removed from Viettel Data Platform. If you wish to re-add the hosts to the cluster, please completely clean the hosts before attempting to add them.',
+  'hosts.bulkOperation.deleteHosts.confirmation.body.msg2': 'To ensure they are completely removed from Viettel Data Platform database,',
+  'hosts.bulkOperation.deleteHosts.confirmation.body.msg3': 'please make sure the Viettel Data Platform Agent process is completely stopped on these hosts before proceeding.',
   'hosts.bulkOperation.deleteHosts.result.header':'Delete Hosts',
   'hosts.bulkOperation.deleteHosts.result.body': 'The following hosts were successfully deleted:',
   'hosts.bulkOperation.confirmation.delete.component.cannot1': 'The following hosts will be skipped (expand for reason):',
@@ -2770,7 +2770,7 @@ Em.I18n.translations = {
   'hosts.host.stackVersions.status.upgrade_failed': 'Upgrade Failed',
   'hosts.host.stackVersions.outOfSync.tooltip': 'This version is Out of Sync on this host. Out of Sync can occur ' +
     'the components on a host change after installing a version not in use. ' +
-    'Click Install to have Ambari install the packages for this version to get this host in sync.',
+    'Click Install to have Viettel Data Platform install the packages for this version to get this host in sync.',
   'hosts.host.stackVersions.install.confirmation': 'You are about to install version <b>{0}</b> on this host.',
 
   'hosts.host.metrics.dataUnavailable':'Data Unavailable',
@@ -2899,13 +2899,13 @@ Em.I18n.translations = {
   'hosts.decommission.popup.header':'Confirmation',
   'hosts.decommission.tooltip.warning':'Cannot {0} since {1} is not running',
   'hosts.delete.popup.body':'Are you sure you want to delete host <i>{0}</i>?',
-  'hosts.delete.popup.body.msg1':'By removing this host, Ambari will ignore future communications from this host. Software packages will not be removed from the host. The components on the host should not be restarted. If you wish to readd this host to the cluster, be sure to clean the host.',
+  'hosts.delete.popup.body.msg1':'By removing this host, Viettel Data Platform will ignore future communications from this host. Software packages will not be removed from the host. The components on the host should not be restarted. If you wish to readd this host to the cluster, be sure to clean the host.',
   'hosts.delete.popup.body.msg3':'If this host was hosting a Zookeeper Server, the Zookeeper Service should be restarted. Go to the <i>Services</i> page.',
   'hosts.delete.popup.body.msg4':'<b>WARNING!</b> Delete the last <i>{0}</i> component[s] in the cluster?</br>Deleting the last components in the cluster could result in permanent loss of service data.',
   'hosts.delete.popup.body.msg5':'<b>WARNING!</b> The agent is still heartbeating so the Host will still exist in the database.',
   'hosts.delete.popup.body.msg6':'To completely delete the Host, first stop ambari-agent on it.',
   'hosts.delete.popup.body.msg7':'<b>WARNING!</b> {0} should be decommissioned first to prevent data loss.',
-  'hosts.delete.popup.body.msg.unknownComponents':'This host does not appear to be online and Ambari communication with the Agent has been lost.',
+  'hosts.delete.popup.body.msg.unknownComponents':'This host does not appear to be online and Viettel Data Platform communication with the Agent has been lost.',
   'hosts.delete.popup.header':'Confirmation',
   'hosts.delete.popup.title':'Delete Host',
   'hosts.delete.popup.unknownComponents':'The following components have unknown status:',
@@ -3448,7 +3448,7 @@ Em.I18n.translations = {
   'alerts.instance.fullLogPopup.header': 'Instance Response',
   'admin.addHawqStandby.button.enable': 'Add HAWQ Standby Master',
   'admin.addHawqStandby.closePopup':'Add HAWQ Standby Master Wizard is in progress. You must allow the wizard to' +
-      ' complete for Ambari to be in usable state. If you choose to quit, you must follow documented manual' +
+      ' complete for Viettel Data Platform to be in usable state. If you choose to quit, you must follow documented manual' +
   ' instructions to complete or reverting adding HAWQ Standby Master. Are you sure you want to exit the wizard?',
   'admin.addHawqStandby.wizard.header': 'Add HAWQ Standby Master Wizard',
   'admin.addHawqStandby.wizard.step1.header': 'Get Started',
@@ -3496,7 +3496,7 @@ Em.I18n.translations = {
       '<p><b>Review Configuration Changes.</b></p>After removing the HAWQ Standby Master, the Wizard removes the ' +
       'hawq_standby_address_host property from hawq-site.xml. As a best practice, you should configure a new HAWQ Standby Master host after the Wizard completes.</div>',
   'admin.removeHawqStandby.wizard.step2.confirm.host.body':'<b>Review HAWQ Standby Master role changes.</b>',
-  'admin.removeHawqStandby.wizard.step2.confirmPopup.body': 'Do you wish to continue with removing HAWQ Standby Master? Please confirm, before proceeding as you will not be able to rollback from Ambari.',
+  'admin.removeHawqStandby.wizard.step2.confirmPopup.body': 'Do you wish to continue with removing HAWQ Standby Master? Please confirm, before proceeding as you will not be able to rollback from Viettel Data Platform.',
   'admin.removeHawqStandby.wizard.step3.header': 'Finalize Setup',
   'admin.removeHawqStandby.wizard.step3.task0.title': 'Remove HAWQ Standby',
   'admin.removeHawqStandby.wizard.step3.task1.title': 'Stop HAWQ Service',
@@ -3504,7 +3504,7 @@ Em.I18n.translations = {
   'admin.removeHawqStandby.wizard.step3.task3.title': 'Delete Role: HAWQ Standby',
   'admin.removeHawqStandby.wizard.step3.task4.title': 'Start HAWQ Service',
   'admin.removeHawqStandby.closePopup':'Remove HAWQ Standby Wizard is in progress. You must allow the wizard to' +
-      ' complete for Ambari to be in usable state. If you choose to quit, you must follow manual instructions to' +
+      ' complete for Viettel Data Platform to be in usable state. If you choose to quit, you must follow manual instructions to' +
       ' get back to a stable state. Are you sure you want to exit the wizard?',
   'admin.removeHawqStandby.wizard.step3.notice.inProgress':'Please wait while HAWQ Standby is being removed',
   'admin.removeHawqStandby.wizard.step3.notice.completed':'HAWQ Standby has been removed successfully.',
@@ -3534,7 +3534,7 @@ Em.I18n.translations = {
       'As a best practice, you should configure a new HAWQ Standby Master host after the wizard completes.</div>',
   'admin.activateHawqStandby.wizard.step2.confirm.host.body':'<b>Review HAWQ Master & Standby Master role changes.</b>',
   'admin.activateHawqStandby.wizard.step2.confirmPopup.body': 'Do you wish to continue with activating HAWQ Standy Master? ' +
-      'Please confirm, before proceeding as you will not be able to rollback from Ambari.',
+      'Please confirm, before proceeding as you will not be able to rollback from Viettel Data Platform.',
   'admin.activateHawqStandby.wizard.step3.header': 'Finalize Setup',
   'admin.activateHawqStandby.wizard.step3.task0.title': 'Activate HAWQ Standby Master',
   'admin.activateHawqStandby.wizard.step3.task1.title': 'Stop HAWQ Service',
@@ -3544,7 +3544,7 @@ Em.I18n.translations = {
   'admin.activateHawqStandby.wizard.step3.task5.title': 'Delete Role: Previous HAWQ Standby',
   'admin.activateHawqStandby.wizard.step3.task6.title': 'Start HAWQ Service',
   'admin.activateHawqStandby.closePopup':'Activate HAWQ Standby Wizard is in progress. You must allow the wizard to' +
-      ' complete for Ambari to be in usable state. If you choose to quit, you must follow manual instructions to' +
+      ' complete for Viettel Data Platform to be in usable state. If you choose to quit, you must follow manual instructions to' +
       ' get back to a stable state. Are you sure you want to exit the wizard?',
   'admin.activateHawqStandby.wizard.step3.notice.inProgress':'Please wait while HAWQ Standby Master is being activated',
   'admin.activateHawqStandby.wizard.step3.notice.completed':'HAWQ Standby Master has been activated successfully.',
