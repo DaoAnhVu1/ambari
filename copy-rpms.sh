@@ -41,10 +41,26 @@ cp /home/app1/Downloads/odp/var/www/html/ambari-release/dist/centos9/1.x/BUILDS/
 createrepo target/rpms
 
 
-# Copy 2
+# Copy 2, Linh đẹp trai nhất thế giới
 rm target/rpms/ambari-agent-2.7.9.0-0.x86_64.rpm
 rm target/rpms/ambari-server-2.7.9.0-0.x86_64.rpm
 cp ambari-agent/target/rpm/ambari-agent/RPMS/x86_64/ambari-agent-2.7.9.0-0.x86_64.rpm target/rpms
 cp ambari-server/target/rpm/ambari-server/RPMS/x86_64/ambari-server-2.7.9.0-0.x86_64.rpm target/rpms
 
 createrepo target/rpms
+
+rm -rf /home/app1/Downloads/odp/custom-ambari-repo/*
+cp -r target/rpms/* /home/app1/Downloads/odp/custom-ambari-repo/
+
+# Copy 3, pro
+docker exec -it wonderful_golick mvn -B install package rpm:rpm "-Dmaven.clover.skip=true" "-DskipTests" "-Dstack.distribution=ODP" "-Drat.ignoreErrors=true" -Dpython.ver="python >= 2.6" -Dfindbugs.skip=true -DnewVersion=2.7.6.0.0 -DbuildNumber=7ee807e194f55e732298abdb8c672413f267c2f344cc573c50f76803fe38f5e1708db3605086048560dfefa6a2cda1ac6e704ee1686156fd1e9acce1dc60def7 -Dviews -Prpm "-Dodp.release.number=270" -DaltReleaseDeploymentRepository=nexus::default::https://nexus.luc-data.com/repository/maven-releases/ -DaltDeploymentRepository=nexus::default::https://nexus.luc-data.com/repository/maven-releases/
+rm target/rpms/ambari-agent-2.7.9.0-0.x86_64.rpm
+rm target/rpms/ambari-server-2.7.9.0-0.x86_64.rpm
+cp ambari-agent/target/rpm/ambari-agent/RPMS/x86_64/ambari-agent-2.7.9.0-0.x86_64.rpm target/rpms
+cp ambari-server/target/rpm/ambari-server/RPMS/x86_64/ambari-server-2.7.9.0-0.x86_64.rpm target/rpms
+
+docker exec -it wonderful_golick createrepo /home/app1/src/target/rpms
+
+rm -rf /home/app1/Downloads/odp/custom-ambari-repo/*
+cp -r target/rpms/* /home/app1/Downloads/odp/custom-ambari-repo/
+

@@ -83,7 +83,7 @@ var AmbariViewHelper = {
             async: false,
             success: function(result) {
                 Ember.ENV.instanceInfo = result;
-                // Update the API URL pointing to Ambari View Resource
+                // Update the API URL pointing to Viettel Data Platform View Resource
                 Ember.ENV.API_URL = viewInfo.API_URL + "/resources/proxy";
                 Ember.ENV.FILE_API_URL = viewInfo.API_URL + "/resources/proxy/fileServices";
             }
