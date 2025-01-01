@@ -1,6 +1,6 @@
 {
   "name": "Ambari",
-  "description": "Front-end package for the Apache Ambari Project",
+  "description": "Front-end package for the Viettel Data PlatformApache Ambari Project",
   "version": "2.4.0",
   "homepage": "http://ambari.apache.org/",
   "repository": {

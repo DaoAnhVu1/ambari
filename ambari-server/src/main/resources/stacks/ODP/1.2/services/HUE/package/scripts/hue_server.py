@@ -48,8 +48,10 @@ class HueServer(Script):
 
         hue_str = params.stack_version
         hue_str = 'hue' if os_family == 'Ubuntu' else 'hue_'+hue_str.replace('-','_').replace('.','_')
+        # service_packagedir = params.service_packagedir
+        
         for index in range(len(hue_packages)):
-            hue_packages[index] = "{service_packagedir}/scripts/all/" + hue_str + hue_packages[index] + "*"
+            hue_packages[index] = format("{service_packagedir}/scripts/all/") + hue_str + hue_packages[index] + "*"
         return hue_packages
 
     def install(self, env):
@@ -59,10 +61,18 @@ class HueServer(Script):
         self.install_packages(env)
         self.hue_packages = self.hue_packages_fetcher()
         Logger.info(format("Installing Hue Service"))
+        
+        #FIXME: Only support centos 9, unsupport ubuntu
+        #FIXME: Not ensure yum install or rpm run as root
         if self.hue_packages is not None and len(self.hue_packages):
-            Execute("rpm -Uvh {service_packagedir}/scripts/all/*")
+            Execute(format("yum install -y python3.9-setuptools python3.9-devel python3.9-psycopg2"), ignore_failures=True)
+            Execute(format("rpm -Uvh --nodeps {service_packagedir}/scripts/all/*"), ignore_failures=True)
+            # Execute(format("yum install -y {service_packagedir}/scripts/all/*"))
         conf_hue()
         setup_user()
+        
+        Logger.info("Setup Database For Hue Service")
+        self.metastoresync(env)
 
     def configure(self, env):
         import params

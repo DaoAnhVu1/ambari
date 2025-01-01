@@ -158,6 +158,7 @@ class HdfsServiceCheckWindows(HdfsServiceCheck):
     hdfs_cmd = "cmd /C %s" % (os.path.join(params.hadoop_home, "bin", "hdfs.cmd"))
     safemode_command = "%s dfsadmin -safemode get | %s OFF" % (hdfs_cmd, params.grep_exe)
 
+    #FIXME: add automatically leaving safemode
     Execute(safemode_command, logoutput=True, try_sleep=3, tries=20)
     Execute(create_dir_cmd, user=params.hdfs_user,logoutput=True, ignore_failures=True)
     Execute(own_dir, user=params.hdfs_user,logoutput=True)

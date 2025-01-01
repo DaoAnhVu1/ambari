@@ -71,6 +71,7 @@ def wait_for_safemode_off(hdfs_binary, afterwait_sleep=0, execute_kinit=False, r
     dfsadmin_base_command = get_dfsadmin_base_command(hdfs_binary, use_specific_namenode=True)
     is_namenode_safe_mode_off = dfsadmin_base_command + " -safemode get | grep 'Safe mode is OFF'"
 
+    #FIXME: add automatically leaving safemode
     # Wait up to 30 mins
     Execute(is_namenode_safe_mode_off, tries=retries, try_sleep=sleep_seconds,
       user=params.hdfs_user, logoutput=True)
